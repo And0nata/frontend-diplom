@@ -12,7 +12,8 @@
 
 <body>
   <!-- Навигация -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <a class="navbar-brand" href="#">
       <img src="./testing.png" width="50" height="30" class="d-inline-block align-top" alt="">
       Тестеры
@@ -50,6 +51,9 @@
           <a class="nav-link" href="#">Еще тестируем...</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="#">Отзывы</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="#">Как нас найти?</a>
         </li>
       </ul>
@@ -57,11 +61,16 @@
         <input class="form-control mr-sm-2" type="search" placeholder="Поиск" aria-label="Поиск">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Поиск</button>
       </form>
+
     </div>
   </nav>
+  <div class="fixed-bottom right"><img src="./Bag.jpg" class="img-thumbnail" style="width:100px;" alt="..."></div>
+
+
 
   <!-- карточки -->
   <div class="container">
+    <h2 class="text-center my-5">Компания тестировщиков <br>"Тестируем тестирование"</h2>
     <h3 class="nav justify-content-center">Тестируем всё!</h3><br>
     <div class="row row-cols-1 row-cols-md-3">
       <div class="col mb-4">
@@ -69,7 +78,8 @@
           <img src="..." class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Тестирование Frontend</h5>
-            <p class="card-text">Профессиональное тестирование вашего веб-интерфейса – убедитесь, что ваш сайт работает безупречно на любом устройстве и во всех популярных браузерах.</p>
+            <p class="card-text">Профессиональное тестирование вашего веб-интерфейса – убедитесь, что ваш сайт работает
+              безупречно на любом устройстве и во всех популярных браузерах.</p>
           </div>
         </div>
       </div>
@@ -78,7 +88,8 @@
           <img src="..." class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Тестирование API</h5>
-            <p class="card-text">Полное тестирование вашего API – убедитесь, что оно обеспечивает надежное взаимодействие вашего приложения с другими системами и сервисами.</p>
+            <p class="card-text">Полное тестирование вашего API – убедитесь, что оно обеспечивает надежное
+              взаимодействие вашего приложения с другими системами и сервисами.</p>
           </div>
         </div>
       </div>
@@ -87,7 +98,8 @@
           <img src="..." class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Тестирование Backend</h5>
-            <p class="card-text">Профессиональная проверка вашего серверного кода – убедитесь, что ваша система обрабатывает данные правильно, имеет высокую безотказность и масштабируемость.</p>
+            <p class="card-text">Профессиональная проверка вашего серверного кода – убедитесь, что ваша система
+              обрабатывает данные правильно, имеет высокую безотказность и масштабируемость.</p>
           </div>
         </div>
       </div>
@@ -96,7 +108,9 @@
           <img src="..." class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Тестирование мобильных приложений</h5>
-            <p class="card-text">Гарантированное качество вашего мобильного приложения – мы проверим его функциональность, совместимость, производительность и удобство использования на различных устройствах и операционных системах.</p>
+            <p class="card-text">Гарантированное качество вашего мобильного приложения – мы проверим его
+              функциональность, совместимость, производительность и удобство использования на различных устройствах и
+              операционных системах.</p>
           </div>
         </div>
       </div>
@@ -105,7 +119,8 @@
           <img src="..." class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Тестирование безопасность</h5>
-            <p class="card-text">Защитите ваше приложение от угроз – мы проведем всестороннюю проверку на уязвимости и поможем вам устранить проблемы безопасности, чтобы ваши данные и система были в безопасности.</p>
+            <p class="card-text">Защитите ваше приложение от угроз – мы проведем всестороннюю проверку на уязвимости и
+              поможем вам устранить проблемы безопасности, чтобы ваши данные и система были в безопасности.</p>
           </div>
         </div>
       </div>
@@ -114,83 +129,102 @@
           <img src="..." class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Нагрузочное тестирование</h5>
-            <p class="card-text">Откройте для своего приложения все границы – мы проведем тесты на высокой нагрузке, чтобы убедиться в его стабильности, масштабируемости и производительности в условиях реального использования.</p>
+            <p class="card-text">Откройте для своего приложения все границы – мы проведем тесты на высокой нагрузке,
+              чтобы убедиться в его стабильности, масштабируемости и производительности в условиях реального
+              использования.</p>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- раздел о багах -->
-    <div class="container">
-      <h3 class="nav justify-content-center">Что происходит и кто такие баги</h3><br>
-      <div class="card mb-3" >
-        <div class="row no-gutters">
-          <div class="col-md-4">
-            <img src="..." alt="...">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Что такое баги</h5>
-              <p class="card-text">Баги – это неполадки или ошибки, которые возникают в программном обеспечении или веб-сайтах. Они могут привести к неправильной работе функций или даже к полной остановке системы.</p>
-            </div>
-          </div>
+  <!-- раздел о багах -->
+  <div class="container">
+    <h3 class="nav justify-content-center">Что происходит и кто такие баги</h3><br>
+    <div class="card mb-3">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img src="..." alt="...">
         </div>
-      </div>
-      <div class="card mb-3" >
-        <div class="row no-gutters">
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Вокруг полно багов</h5>
-              <p class="card-text">Все программы содержат баги, и некоторые из них могут быть очень серьезными. Независимо от того, насколько тщательно разработчики тестируют свое ПО, всегда останутся мелкие дефекты и проблемы, которые могут вызвать неудобства для пользователей.</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <img src="..." alt="...">
-          </div>
-        </div>
-      </div>
-      <div class="card mb-3">
-        <div class="row no-gutters">
-          <div class="col-md-4">
-            <img src="..." alt="...">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Баги наносят ущерб</h5>
-              <p class="card-text">Баги могут причинить значительный ущерб как пользователям, так и разработчикам. Для пользователей они могут стать причиной потери данных, невозможности выполнения определенных действий или даже угрозой безопасности данных. Для разработчиков, баги могут повлиять на репутацию компании, привести к падению продаж или требовать дополнительных ресурсов для исправления.</p>
-            </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Что такое баги</h5>
+            <p class="card-text">Баги – это неполадки или ошибки, которые возникают в программном обеспечении или
+              веб-сайтах. Они могут привести к неправильной работе функций или даже к полной остановке системы.</p>
           </div>
         </div>
       </div>
     </div>
+    <div class="card mb-3">
+      <div class="row no-gutters">
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Вокруг полно багов</h5>
+            <p class="card-text">Все программы содержат баги, и некоторые из них могут быть очень серьезными.
+              Независимо от того, насколько тщательно разработчики тестируют свое ПО, всегда останутся мелкие дефекты
+              и проблемы, которые могут вызвать неудобства для пользователей.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <img src="..." alt="...">
+        </div>
+      </div>
+    </div>
+    <div class="card mb-3">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img src="..." alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Баги наносят ущерб</h5>
+            <p class="card-text">Баги могут причинить значительный ущерб как пользователям, так и разработчикам. Для
+              пользователей они могут стать причиной потери данных, невозможности выполнения определенных действий или
+              даже угрозой безопасности данных. Для разработчиков, баги могут повлиять на репутацию компании, привести
+              к падению продаж или требовать дополнительных ресурсов для исправления.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <!-- раздел о мотивации тестировать -->
+  <!-- раздел о мотивации тестировать -->
+  <div class="container">
     <h3 class="nav justify-content-center">Зачем Вам тестирование?</h3><br>
     <div class="card-deck">
       <div class="card">
         <img src="..." class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Избегание ущерба</h5>
-          <p class="card-text">Регулярное тестирование программного обеспечения помогает выявить и устранить баги до того, как они нанесут ущерб пользователям. Благодаря тестированию можно обнаружить и исправить ошибки на ранних стадиях разработки, что позволяет сохранить высокий уровень качества и надежности продукта.</p>
+          <p class="card-text">Регулярное тестирование программного обеспечения помогает выявить и устранить баги до
+            того, как они нанесут ущерб пользователям. Благодаря тестированию можно обнаружить и исправить ошибки на
+            ранних стадиях разработки, что позволяет сохранить высокий уровень качества и надежности продукта.</p>
         </div>
       </div>
       <div class="card">
         <img src="..." class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Всё работает</h5>
-          <p class="card-text">Хорошо спланированное и проведенное тестирование программного обеспечения гарантирует его работоспособность. Тестирование включает в себя проверку функциональности, производительности, безопасности и других аспектов ПО, чтобы убедиться, что оно соответствует требованиям и ожиданиям пользователей.</p>
+          <p class="card-text">Хорошо спланированное и проведенное тестирование программного обеспечения гарантирует его
+            работоспособность. Тестирование включает в себя проверку функциональности, производительности, безопасности
+            и других аспектов ПО, чтобы убедиться, что оно соответствует требованиям и ожиданиям пользователей.</p>
         </div>
       </div>
       <div class="card">
         <img src="..." class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Все хотят качество</h5>
-          <p class="card-text">Качество продукта имеет решающее значение как для потребителей, так и для производителей. Пользователи ожидают надежности, безопасности и эффективности программного обеспечения, а производители стремятся к высокому уровню доверия и удовлетворенности клиентов. Тестирование помогает обеспечить высокое качество продукта и удовлетворить потребности всех заинтересованных сторон.</p>
+          <p class="card-text">Качество продукта имеет решающее значение как для потребителей, так и для производителей.
+            Пользователи ожидают надежности, безопасности и эффективности программного обеспечения, а производители
+            стремятся к высокому уровню доверия и удовлетворенности клиентов. Тестирование помогает обеспечить высокое
+            качество продукта и удовлетворить потребности всех заинтересованных сторон.</p>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- раздел о тестировщиках -->
+  <!-- раздел о тестировщиках -->
+  <div class="container">
     <h3 class="nav justify-content-center">Кто тестировать будет?</h3><br>
     <div class="row row-cols-1 row-cols-md-2">
       <div class="col mb-4">
@@ -198,8 +232,7 @@
           <img src="..." class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Знающие и умеющие</h5>
-            <p class="card-text">Это более длинная карта С вспомогательным текстом ниже в качестве естественного
-              перехода к дополнительному контенту. Этот контент немного длиннее.</p>
+            <p class="card-text">Хочешь работать с настоящими профессионалами в мире тестирования? Присоединяйся к нашей группе тестировщиков "Знающие и умеющие"! Здесь мы собрали самых опытных и компетентных специалистов. Обменивайся знаниями, учись новым техникам тестирования и развивайся вместе с нами. Вместе мы создадим непробиваемую команду тестеров!</p>
           </div>
         </div>
       </div>
@@ -208,8 +241,7 @@
           <img src="..." class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Нас миньоны </h5>
-            <p class="card-text">Это более длинная карта С вспомогательным текстом ниже в качестве естественного
-              перехода к дополнительному контенту. Этот контент немного длиннее.</p>
+            <p class="card-text">Нас много как миньонов, и мы готовы не унывая браться за любой объем работы. Выберите желаемое количество тестировщиков для работы. Тестировщики у нас объединенны общими интересами к тестированию и желанием сделать мир ПО лучше.</p>
           </div>
         </div>
       </div>
@@ -218,8 +250,7 @@
           <img src="..." class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">С дипломами и сертификатами</h5>
-            <p class="card-text">Это более длинная карточка с вспомогательным текстом ниже в качестве естественного
-              перехода к дополнительному контенту.</p>
+            <p class="card-text">Мы истинные профессионалы, которые гордятся своими достижениями. Выбирите для тестирования экспертов в своем деле. У нас ты найдешь команду единомышленников и талантливых профессионалов!</p>
           </div>
         </div>
       </div>
@@ -228,284 +259,356 @@
           <img src="..." class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Хотящие работать и сделать лучше</h5>
-            <p class="card-text">Это более длинная карта С вспомогательным текстом ниже в качестве естественного
-              перехода к дополнительному контенту. Этот контент немного длиннее.</p>
+            <p class="card-text">Чувствуем, что можешь сделать лучше, стремимся к постоянному развитию и не боимся брать на себя ответственность за качество продукта. Здесь ты найдешь команду энергичных и мотивированных профессионалов. Мы сделаем каждое тестирование с настоящим мастерством!</p>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- раздел о видах тестирования -->
+  <!-- раздел о видах тестирования -->
+  <div class="container">
     <h2 class="nav justify-content-center">Что тестируем?</h2><br>
-    <div class="row row-cols-1 row-cols-md-2">
-    <div class="card mb-3" style="max-width: 540px;">
-      <div class="row no-gutters">
-        <div class="col-md-4">
-          <img src="..." alt="...">
-          <div class="btn-group btn-group-toggle" data-toggle="buttons">
-            <label class="btn btn-secondary active">
-              <input type="radio" name="options" id="option1" checked> Добавить
-            </label>
-            <label class="btn btn-secondary">
-              <input type="radio" name="options" id="option2"> Убрать
-            </label>
+    <div class="row row-cols-1 row-cols-md-1">
+      <div class="card mb-3">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="..." alt="...">
+            <button type="button" class="btn btn-secondary">Хочу</button>
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Тестирование Frontend</h5>
+              <p class="card-text">Тестирование мобильных приложений - это процесс проверки корректности работы
+                программного обеспечения на мобильных устройствах, таких как смартфоны и планшеты. Во время тестирования
+                мобильных приложений проверяются такие аспекты, как функциональность, совместимость с различными
+                операционными системами, эффективность, производительность и удобство использования. Для тестирования
+                мобильных приложений используются такие инструменты, как Appium, Espresso, XCUITest и другие.</p>
+                <a href="#" class="btn btn-secondary btn-sm disabled" tabindex="-1" role="button" aria-disabled="true">Подробнее</a>
+            </div>
           </div>
         </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">Тестирование Frontend</h5>
-            <p class="card-text">Тестирование мобильных приложений - это процесс проверки корректности работы программного обеспечения на мобильных устройствах, таких как смартфоны и планшеты. Во время тестирования мобильных приложений проверяются такие аспекты, как функциональность, совместимость с различными операционными системами, эффективность, производительность и удобство использования. Для тестирования мобильных приложений используются такие инструменты, как Appium, Espresso, XCUITest и другие.</p>
+      </div>
+      <div class="card mb">
+        <div class="row no-gutters">
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Тестирование Backend</h5>
+              <p class="card-text">Тестирование Backend - это процесс проверки корректности работы серверной части
+                приложения, которая обрабатывает данные, осуществляет бизнес-логику и взаимодействует с базами данных и
+                другими системами. Во время тестирования Backend проверяются такие аспекты, как работоспособность API,
+                правильность обработки данных, безопасность, производительность и масштабируемость. Для тестирования
+                Backend используются такие инструменты, как JUnit, TestNG, PHPUnit и другие.</p>
+                <a href="#" class="btn btn-secondary btn-sm disabled" tabindex="-1" role="button" aria-disabled="true">Подробнее</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <img src="..." alt="...">
+            <button type="button" class="btn btn-secondary">Хочу</button>
+          </div>
+        </div>
+      </div>
+      <div class="card mb">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="..." alt="...">
+            <button type="button" class="btn btn-secondary">Хочу</button>
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Тестирование API</h5>
+              <p class="card-text">Тестирование API - это процесс проверки правильности работы программного интерфейса
+                приложения, который позволяет взаимодействовать с другими приложениями или сетями. Во время тестирования
+                API проверяется достоверность и соответствие стандартам запросов и ответов, а также функциональность и
+                безопасность API. Для тестирования API используются такие инструменты, как Postman, SoapUI, RestAssured
+                и другие.</p>
+                <a href="#" class="btn btn-secondary btn-sm disabled" tabindex="-1" role="button" aria-disabled="true">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb">
+        <div class="row no-gutters">
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Тестирование безопасности</h5>
+              <p class="card-text">Тестирование безопасности - это процесс проверки защищенности приложения от возможных
+                атак и утечек данных. Во время тестирования безопасности выполняются различные виды атак, такие как
+                инъекции SQL, переполнения буфера, кросс-сайтовые скрипты и другие, чтобы проверить, насколько хорошо
+                приложение защищено от таких угроз. Для тестирования безопасности используются такие инструменты, как
+                Burp Suite, OWASP ZAP, Nessus и другие.</p>
+                <a href="#" class="btn btn-secondary btn-sm disabled" tabindex="-1" role="button" aria-disabled="true">Подробнее</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <img src="..." alt="...">
+            <button type="button" class="btn btn-secondary">Хочу</button>
+          </div>
+        </div>
+      </div>
+      <div class="card mb">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="..." alt="...">
+            <button type="button" class="btn btn-secondary">Хочу</button>
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Тестирование мобильных приложений</h5>
+              <p class="card-text">Тестирование мобильных приложений - это процесс проверки корректности работы
+                программного обеспечения на мобильных устройствах, таких как смартфоны и планшеты. Во время тестирования
+                мобильных приложений проверяются такие аспекты, как функциональность, совместимость с различными
+                операционными системами, эффективность, производительность и удобство использования. Для тестирования
+                мобильных приложений используются такие инструменты, как Appium, Espresso, XCUITest и другие.</p>
+                <a href="#" class="btn btn-secondary btn-sm disabled" tabindex="-1" role="button" aria-disabled="true">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb">
+        <div class="row no-gutters">
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Нагрузочное тестирование</h5>
+              <p class="card-text">Нагрузочное тестирование - это процесс проверки производительности и стабильности
+                приложения при разной нагрузке. Во время нагрузочного тестирования приложение подвергается высокой
+                нагрузке, чтобы проверить его способность работать с большим количеством одновременных пользователей или
+                запросов. При тестировании также анализируются показатели производительности, такие как время отклика,
+                пропускная способность и использование ресурсов. Для нагрузочного тестирования используются такие
+                инструменты, как JMeter, LoadRunner, Gatling и другие.</p>
+                <a href="#" class="btn btn-secondary btn-sm disabled" tabindex="-1" role="button" aria-disabled="true">Подробнее</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <img src="..." alt="...">
+            <button type="button" class="btn btn-secondary">Хочу</button>
           </div>
         </div>
       </div>
     </div>
-    <div class="card mb-3" style="max-width: 540px;">
-      <div class="row no-gutters">
-        <div class="col-md-4">
-          <img src="..." alt="...">
-          <div class="btn-group btn-group-toggle" data-toggle="buttons">
-            <label class="btn btn-secondary active">
-              <input type="radio" name="options" id="option1" checked> Добавить
-            </label>
-            <label class="btn btn-secondary">
-              <input type="radio" name="options" id="option2"> Убрать
-            </label>
-          </div>
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">Тестирование API</h5>
-            <p class="card-text">Тестирование API - это процесс проверки правильности работы программного интерфейса приложения, который позволяет взаимодействовать с другими приложениями или сетями. Во время тестирования API проверяется достоверность и соответствие стандартам запросов и ответов, а также функциональность и безопасность API. Для тестирования API используются такие инструменты, как Postman, SoapUI, RestAssured и другие.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="card mb-3" style="max-width: 540px;">
-      <div class="row no-gutters">
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">Тестирование Backend</h5>
-            <p class="card-text">Тестирование Backend - это процесс проверки корректности работы серверной части приложения, которая обрабатывает данные, осуществляет бизнес-логику и взаимодействует с базами данных и другими системами. Во время тестирования Backend проверяются такие аспекты, как работоспособность API, правильность обработки данных, безопасность, производительность и масштабируемость. Для тестирования Backend используются такие инструменты, как JUnit, TestNG, PHPUnit и другие.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <img src="..." alt="...">
-          <div class="btn-group btn-group-toggle" data-toggle="buttons">
-            <label class="btn btn-secondary active">
-              <input type="radio" name="options" id="option1" checked> Добавить
-            </label>
-            <label class="btn btn-secondary">
-              <input type="radio" name="options" id="option2"> Убрать
-            </label>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card mb-3" style="max-width: 540px;">
-      <div class="row no-gutters">
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">Тестирование безопасности</h5>
-            <p class="card-text">Тестирование безопасности - это процесс проверки защищенности приложения от возможных атак и утечек данных. Во время тестирования безопасности выполняются различные виды атак, такие как инъекции SQL, переполнения буфера, кросс-сайтовые скрипты и другие, чтобы проверить, насколько хорошо приложение защищено от таких угроз. Для тестирования безопасности используются такие инструменты, как Burp Suite, OWASP ZAP, Nessus и другие.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <img src="..." alt="...">
-          <div class="btn-group btn-group-toggle" data-toggle="buttons">
-            <label class="btn btn-secondary active">
-              <input type="radio" name="options" id="option1" checked> Добавить
-            </label>
-            <label class="btn btn-secondary">
-              <input type="radio" name="options" id="option2"> Убрать
-            </label>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card mb-3" style="max-width: 540px;">
-      <div class="row no-gutters">
-        <div class="col-md-4">
-          <img src="..." alt="...">
-          <div class="btn-group btn-group-toggle" data-toggle="buttons">
-            <label class="btn btn-secondary active">
-              <input type="radio" name="options" id="option1" checked> Добавить
-            </label>
-            <label class="btn btn-secondary">
-              <input type="radio" name="options" id="option2"> Убрать
-            </label>
-          </div>
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">Тестирование мобильных приложений</h5>
-            <p class="card-text">Тестирование мобильных приложений - это процесс проверки корректности работы программного обеспечения на мобильных устройствах, таких как смартфоны и планшеты. Во время тестирования мобильных приложений проверяются такие аспекты, как функциональность, совместимость с различными операционными системами, эффективность, производительность и удобство использования. Для тестирования мобильных приложений используются такие инструменты, как Appium, Espresso, XCUITest и другие.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card mb-3" style="max-width: 540px;">
-      <div class="row no-gutters">
-        <div class="col-md-4">
-          <img src="..." alt="...">
-          <div class="btn-group btn-group-toggle" data-toggle="buttons">
-            <label class="btn btn-secondary active">
-              <input type="radio" name="options" id="option1" checked> Добавить
-            </label>
-            <label class="btn btn-secondary">
-              <input type="radio" name="options" id="option2"> Убрать
-            </label>
-          </div>
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">Нагрузочное тестирование</h5>
-            <p class="card-text">Нагрузочное тестирование - это процесс проверки производительности и стабильности приложения при разной нагрузке. Во время нагрузочного тестирования приложение подвергается высокой нагрузке, чтобы проверить его способность работать с большим количеством одновременных пользователей или запросов. При тестировании также анализируются показатели производительности, такие как время отклика, пропускная способность и использование ресурсов. Для нагрузочного тестирования используются такие инструменты, как JMeter, LoadRunner, Gatling и другие.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
+  </div>
 
-    <!-- раздел о дополнительных видах тестирования -->
+  <!-- раздел о дополнительных видах тестирования -->
+  <div class="container">
     <h2 class="nav justify-content-center">Дополнительные тестирования?</h2><br>
     <div class="card">
       <h5 class="card-header">Тестирование рынка</h5>
       <div class="card-body">
         <h5 class="card-title">Маркетинговые исследования</h5>
-        <p class="card-text">Узнайте, что думают ваши клиенты о вашем продукте или услуге с помощью нашего профессионального маркетингового исследования. Мы проведем тщательное тестирование рынка, чтобы вы получили ценные инсайты и смогли принять осознанные решения для развития вашего бизнеса. Обратитесь к нам сегодня и убедитесь в успешном будущем вашего предприятия!"</p>
-        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-          <label class="btn btn-secondary active">
-            <input type="radio" name="options" id="option1" checked> Добавить
-          </label>
-          <label class="btn btn-secondary">
-            <input type="radio" name="options" id="option2"> Убрать
-          </label>
-        </div>
+        <p class="card-text">Узнайте, что думают ваши клиенты о вашем продукте или услуге с помощью нашего
+          профессионального маркетингового исследования. Мы проведем тщательное тестирование рынка, чтобы вы получили
+          ценные инсайты и смогли принять осознанные решения для развития вашего бизнеса. Обратитесь к нам сегодня и
+          убедитесь в успешном будущем вашего предприятия!"</p>
+        <button type="button" class="btn btn-secondary">Хочу</button>
       </div>
     </div>
     <div class="card">
       <h5 class="card-header">A/В тестирование</h5>
       <div class="card-body">
         <h5 class="card-title">Улучшение сайта и рекламы</h5>
-        <p class="card-text">Улучшите эффективность своей рекламы с помощью A/B тестирования, проводимого нашим опытным менеджером по рекламе. Мы проведем тесты на различных каналах и форматах, чтобы определить наиболее эффективные рекламные стратегии для вашего бизнеса. Заинтересованы в увеличении конверсии и привлечении новых клиентов? Обратитесь к нам прямо сейчас</p>
-        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-          <label class="btn btn-secondary active">
-            <input type="radio" name="options" id="option1" checked> Добавить
-          </label>
-          <label class="btn btn-secondary">
-            <input type="radio" name="options" id="option2"> Убрать
-          </label>
-        </div>
+        <p class="card-text">Улучшите эффективность своей рекламы с помощью A/B тестирования, проводимого нашим опытным
+          менеджером по рекламе. Мы проведем тесты на различных каналах и форматах, чтобы определить наиболее
+          эффективные рекламные стратегии для вашего бизнеса. Заинтересованы в увеличении конверсии и привлечении новых
+          клиентов? Обратитесь к нам прямо сейчас</p>
+        <button type="button" class="btn btn-secondary">Хочу</button>
       </div>
     </div>
     <div class="card">
       <h5 class="card-header">Тестирование идей</h5>
       <div class="card-body">
         <h5 class="card-title">DA и DS</h5>
-        <p class="card-text">Идеи – это источник великих достижений. Протестируйте свои идеи и концепции с помощью аналитики данных и специалистов в области искусственного интеллекта. Наша команда DS проведет комплексное тестирование, анализируя данные и предоставляя вам ценные выводы. Откройте новый источник вдохновения и успешно разрабатывайте новые продукты и услуги. Свяжитесь с нами сегодня и исследуйте свой потенциал!</p>
-        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-          <label class="btn btn-secondary active">
-            <input type="radio" name="options" id="option1" checked> Добавить
-          </label>
-          <label class="btn btn-secondary">
-            <input type="radio" name="options" id="option2"> Убрать
-          </label>
+        <p class="card-text">Идеи – это источник великих достижений. Протестируйте свои идеи и концепции с помощью
+          аналитики данных и специалистов в области искусственного интеллекта. Наша команда DS проведет комплексное
+          тестирование, анализируя данные и предоставляя вам ценные выводы. Откройте новый источник вдохновения и
+          успешно разрабатывайте новые продукты и услуги. Свяжитесь с нами сегодня и исследуйте свой потенциал!</p>
+        <button type="button" class="btn btn-secondary">Хочу</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- раздел отзывов и сертификатов-->
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h3 class="nav justify-content-center">Отзывы и мнения</h3><br>
+        <!-- карусель с отзывами -->
+        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="..." class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Метка первого слайда</h5>
+                <p>Некоторый репрезентативный заполнитель для первого слайда.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="..." class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Метка второго слайда</h5>
+                <p>Некоторый репрезентативный заполнитель для второго слайда.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="..." class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Метка третьего слайда</h5>
+                <p>Некоторый репрезентативный заполнитель для третьего слайда.</p>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Предыдущий</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Следующий</span>
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <h3 class="nav justify-content-center">Наши грамоты</h3><br>
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="..." class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="..." class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="..." class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Предыдущий</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Следующий</span>
+          </a>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- раздел отзывов -->
-    <h3 class="nav justify-content-center">Отзывы и мнения</h3><br>
-    <!-- карусель с отзывами -->
-    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="..." class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Метка первого слайда</h5>
-            <p>Некоторый репрезентативный заполнитель для первого слайда.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="..." class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Метка второго слайда</h5>
-            <p>Некоторый репрезентативный заполнитель для второго слайда.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="..." class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Метка третьего слайда</h5>
-            <p>Некоторый репрезентативный заполнитель для третьего слайда.</p>
+  <!-- Смета и форма обратной связи-->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h3 class="nav justify-content-center ">Выберите виды тестирования:</h3><br>
+        <table class="table table-sm table-striped table-hover table-responsive-md">
+          <thead>
+            <tr>
+              <th scope="col">Вид тестирования</th>
+              <th scope="col">Количество тестировщиков</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Тестирование Frontend</td>
+              <td>
+                <button type="button" class="btn btn-outline-secondary btn-sm">+</button>
+                1
+                <button type="button" class="btn btn-outline-secondary btn-sm">-</button>
+<button type="button" class="btn btn-outline-secondary btn-sm">Это не надо тестировать</button></td>
+            </tr>
+            <tr>
+              <td>Тестирование API</td>
+              <td>
+                <button type="button" class="btn btn-outline-secondary btn-sm">+</button>
+                1
+                <button type="button" class="btn btn-outline-secondary btn-sm">-</button>
+<button type="button" class="btn btn-outline-secondary btn-sm">Это не надо тестировать</button></td>
+            </tr>
+            <tr>
+              <td>Тестирование Backend</td>
+              <td>
+                <button type="button" class=" btn btn-outline-secondary btn-sm ">+</button>
+                1
+                <button type="button" class="btn btn-outline-secondary btn-sm">-</button>
+<button type="button" class="btn btn-outline-secondary btn-sm">Это не надо тестировать</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Добавить еще тестирование
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Тестирование Frontend</a>
+            <a class="dropdown-item" href="#">Тестирование API</a>
+            <a class="dropdown-item" href="#">Тестирование Backend</a>
+            <a class="dropdown-item" href="#">Тестирование приложений</a>
+            <a class="dropdown-item" href="#">Тестирование безопасность</a>
+            <a class="dropdown-item" href="#">Нагрузочное тестирование</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Тестирование рынка</a>
+            <a class="dropdown-item" href="#">A/В тестирование</a>
+            <a class="dropdown-item" href="#">Тестирование идей</a>
           </div>
         </div>
       </div>
-      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Предыдущий</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Следующий</span>
-      </a>
-    </div>
-
-
-    <!-- форма обратной связи и контакты -->
-    <div class="container">
-      <h2 class="text-center my-5">Компания тестировщиков <br>"Тестируем тестирование"</h2>
-      <div class="row">
-        <div class="col-md-7">
-          <h3 class="text-center">Форма обратной связи</h3>
-          <form action="">
-            <div class="form-group">
-              <input type="email" class="form-control form-control-lg" placeholder="E-mail" required />
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control form-control-lg" placeholder="Ваше имя" required />
-            </div>
-            <div class="form-group">
-              <textarea class="form-control" rows="3" placeholder="Ваше сообщение"></textarea>
-            </div>
-            <div class="form-group">
-              <input type="submit" class="btn btn-info btn-lg btn-block" />
-            </div>
-          </form>
+      <div class="col-md-5">
+        <h3 class="text-center">Форма обратной связи</h3>
+        <div action="">
+          <div class="form-group mb-2">
+            <input type="email" class="form-control form-control-lg" placeholder="E-mail" required />
+          </div>
+          <div class="form-group mb-2">
+            <input type="tel" class="form-control form-control-lg" placeholder="tel" required />
+          </div>
+          <div class="form-group mb-2">
+            <input type="text" class="form-control form-control-lg" placeholder="Ваше имя" required />
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" rows="3" placeholder="Ваше сообщение"></textarea>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Согласие на обработку персональных данных
+            </label>
+          </div>
+          <div class="form-group">
+            <input type="submit" class="btn btn-info btn-lg" />
+          </div>
         </div>
-        <div class="col-md-5">
-          <h3 class="text-center">Контакты</h3>
-          <h3>Сайт:</h3>
-          <p><a href="https://practicum.yandex.ru/career-center/">Сайт карьерного центра</a></p>
-          <h3>Телефон:</h3>
-          <p><a href="tel:+88007009329">8-800-700-93-29</a></p>
-          <h3>График работы:</h3>
-          <p>Круглосуточно</p>
-        </div>
-
       </div>
+
+
+  </div>
+
+  <!-- футер с картой  и контакты -->
+  <h3 class="nav justify-content-center">Ищите нас на планете Земля</h3><br>
+  <div class="row">
+    <div class="col-md-7">
+      <h3>Карта</h3>
     </div>
+    <div class="col-md-5">
+      <h3 class="text-center">Контакты</h3>
+      <h3>Сайт:</h3>
+      <p><a href="https://practicum.yandex.ru/career-center/">Сайт карьерного центра</a></p>
+      <h3>Телефон:</h3>
+      <p><a href="tel:+88007009329">8-800-700-93-29</a></p>
+      <h3>График работы:</h3>
+      <p>Круглосуточно</p>
+    </div>
+  </div>
 
-    <!-- футер с картой -->
-    <h3 class="nav justify-content-center">Ищите нас на планете Земля</h3><br>
-    <div class="container pl-5 mi-5">
-			<script type="text/javascript" 
-            charset="utf-8" 
-            async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A044a6df9d98b3d5f599d161e01e98b268e849165f15a3532d5e70618dd91480d&amp;width=1000&amp;height=424&amp;lang=ru_RU&amp;scroll=true"></script>
-		</div>
-
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
-      crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
