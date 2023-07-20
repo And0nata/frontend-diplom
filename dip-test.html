@@ -9,10 +9,16 @@
 
   <title>Тестирование</title>
 </head>
+<style>
+tr {
+  display: none;
+}
 
+
+
+</style>
 <body>
   <!-- Навигация -->
-
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <a class="navbar-brand" href="#">
       <img src="./img/testing.png" width="50" height="30" class="d-inline-block align-top" alt="">
@@ -286,7 +292,7 @@
         <div class="row no-gutters">
           <div class="col-md-4">
             <img src="..." alt="...">
-            <button type="button" class="btn btn-secondary">Хочу</button>
+            <button type="button" class="btn btn-secondary" id="btnAdd2Front">Хочу</button>
           </div>
           <div class="col-md-8">
             <div class="card-body">
@@ -334,7 +340,7 @@
           </div>
           <div class="col-md-4">
             <img src="..." alt="...">
-            <button type="button" class="btn btn-secondary">Хочу</button>
+            <button type="button" class="btn btn-secondary" id="btnAdd2Back">Хочу</button>
           </div>
         </div>
       </div>
@@ -342,7 +348,7 @@
         <div class="row no-gutters">
           <div class="col-md-4">
             <img src="..." alt="...">
-            <button type="button" class="btn btn-secondary">Хочу</button>
+            <button type="button" class="btn btn-secondary" id="btnAdd2Api">Хочу</button>
           </div>
           <div class="col-md-8">
             <div class="card-body">
@@ -387,7 +393,7 @@
           </div>
           <div class="col-md-4">
             <img src="..." alt="...">
-            <button type="button" class="btn btn-secondary">Хочу</button>
+            <button type="button" class="btn btn-secondary" id="btnAdd2Bez">Хочу</button>
           </div>
         </div>
       </div>
@@ -395,7 +401,7 @@
         <div class="row no-gutters">
           <div class="col-md-4">
             <img src="..." alt="...">
-            <button type="button" class="btn btn-secondary">Хочу</button>
+            <button type="button" class="btn btn-secondary" id="btnAdd2Mob">Хочу</button>
           </div>
           <div class="col-md-8">
             <div class="card-body">
@@ -441,7 +447,7 @@
           </div>
           <div class="col-md-4">
             <img src="..." alt="...">
-            <button type="button" class="btn btn-secondary">Хочу</button>
+            <button type="button" class="btn btn-secondary" id="btnAdd2Stress">Хочу</button>
           </div>
         </div>
       </div>
@@ -459,7 +465,7 @@
           профессионального маркетингового исследования. Мы проведем тщательное тестирование рынка, чтобы вы получили
           ценные инсайты и смогли принять осознанные решения для развития вашего бизнеса. Обратитесь к нам сегодня и
           убедитесь в успешном будущем вашего предприятия!"</p>
-        <button type="button" class="btn btn-secondary" style="visibility: hidden;">Хочу</button>
+        <button id="btnAdd2Mark"  type="button" class="btn btn-secondary" >Хочу</button>
       </div>
     </div>
     <div class="card">
@@ -470,18 +476,18 @@
           менеджером по рекламе. Мы проведем тесты на различных каналах и форматах, чтобы определить наиболее
           эффективные рекламные стратегии для вашего бизнеса. Заинтересованы в увеличении конверсии и привлечении новых
           клиентов? Обратитесь к нам прямо сейчас</p>
-        <button type="button" class="btn btn-secondary">Хочу</button>
+        <button id="btnAdd2AB"  type="button" class="btn btn-secondary">Хочу</button>
       </div>
     </div>
     <div class="card">
       <h5 class="card-header">Тестирование идей</h5>
       <div class="card-body">
-        <h5 class="card-title">DA и DS</h5>
+        <h5 class="card-title">AD и DS</h5>
         <p class="card-text">Идеи – это источник великих достижений. Протестируйте свои идеи и концепции с помощью
           аналитики данных и специалистов в области искусственного интеллекта. Наша команда DS проведет комплексное
           тестирование, анализируя данные и предоставляя вам ценные выводы. Откройте новый источник вдохновения и
           успешно разрабатывайте новые продукты и услуги. Свяжитесь с нами сегодня и исследуйте свой потенциал!</p>
-        <button type="button" class="btn btn-secondary">Хочу</button>
+        <button id="btnAdd2AD"  type="button" class="btn btn-secondary">Хочу</button>
       </div>
     </div>
   </div>
@@ -547,7 +553,7 @@
         </div>
       </div>
       <div class="col">
-        <h3 class="nav justify-content-center">Наши cрамоты</h3><br>
+        <h3 class="nav justify-content-center">Наши грамоты</h3><br>
         <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -615,31 +621,85 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <tr id="trFront">
               <td>Тестирование Frontend</td>
               <td>
-                <button type="button" class="btn btn-outline-secondary btn-sm">+</button>
-                1
-                <button type="button" class="btn btn-outline-secondary btn-sm">-</button>
-                <button type="button" class="btn btn-outline-secondary btn-sm">Это не надо тестировать</button>
+                <button id="btnMinusFront" type="button" class="btn btn-outline-secondary btn-sm">-</button>
+                <span id="tdSpanFront">1</span>
+                <button id="btnPlusFront" type="button" class="btn btn-outline-secondary btn-sm">+</button>
+                <button type="button" class="btn btn-outline-secondary btn-sm" id="btnNotFront">Это не надо тестировать</button>
               </td>
             </tr>
-            <tr>
+            <tr id="trApi">
               <td>Тестирование API</td>
               <td>
-                <button type="button" class="btn btn-outline-secondary btn-sm">+</button>
-                1
-                <button type="button" class="btn btn-outline-secondary btn-sm">-</button>
-                <button type="button" class="btn btn-outline-secondary btn-sm">Это не надо тестировать</button>
+                <button id="btnMinusApi" type="button" class="btn btn-outline-secondary btn-sm">-</button>
+                <span id="tdSpanApi">1</span>
+                <button id="btnPlusApi" type="button" class="btn btn-outline-secondary btn-sm">+</button>
+                <button type="button" class="btn btn-outline-secondary btn-sm" id="btnNotApi">Это не надо тестировать</button>
               </td>
             </tr>
-            <tr>
+            <tr id="trBack">
               <td>Тестирование Backend</td>
               <td>
-                <button type="button" class=" btn btn-outline-secondary btn-sm ">+</button>
-                1
-                <button type="button" class="btn btn-outline-secondary btn-sm">-</button>
-                <button type="button" class="btn btn-outline-secondary btn-sm">Это не надо тестировать</button>
+                <button id="btnMinusBack" type="button" class="btn btn-outline-secondary btn-sm">-</button>
+                <span id="tdSpanBack">1</span>
+                <button id="btnPlusBack" type="button" class=" btn btn-outline-secondary btn-sm ">+</button>
+                <button type="button" class="btn btn-outline-secondary btn-sm" id="btnNotBack">Это не надо тестировать</button>
+              </td>
+            </tr>
+            <tr id="trBez">
+              <td>Тестирование безопасности</td>
+              <td>
+                <button id="btnMinusBez" type="button" class="btn btn-outline-secondary btn-sm">-</button>
+                <span id="tdSpanBez">1</span>
+                <button id="btnPlusBez" type="button" class="btn btn-outline-secondary btn-sm">+</button>
+                <button  type="button" class="btn btn-outline-secondary btn-sm" id="btnNotBez">Это не надо тестировать</button>
+              </td>
+            </tr>
+            <tr id="trMob">
+              <td>Тестирование приложений</td>
+              <td>
+                <button id="btnMinusMob" type="button" class="btn btn-outline-secondary btn-sm">-</button>
+                <span id="tdSpanMob">1</span>
+                <button id="btnPlusMob" type="button" class="btn btn-outline-secondary btn-sm">+</button>
+                <button  type="button" class="btn btn-outline-secondary btn-sm" id="btnNotMob">Это не надо тестировать</button>
+              </td>
+            </tr>
+            <tr id="trStress">
+              <td>Нагрузочное тестирование</td>
+              <td>
+                <button id="btnMinusStress" type="button" class="btn btn-outline-secondary btn-sm">-</button>
+                <span id="tdSpanStress">1</span>
+                <button id="btnPlusStress" type="button" class=" btn btn-outline-secondary btn-sm ">+</button>
+                <button  type="button" class="btn btn-outline-secondary btn-sm" id="btnNotStress">Это не надо тестировать</button>
+              </td>
+            </tr>
+            <tr id="trMark">
+              <td>Тестирование рынка</td>
+              <td>
+                <button id="btnMinusMark" type="button" class="btn btn-outline-secondary btn-sm">-</button>
+                <span id="tdSpanMark">1</span>
+                <button id="btnPlusMark" type="button" class="btn btn-outline-secondary btn-sm">+</button>
+                <button  type="button" class="btn btn-outline-secondary btn-sm" id="btnNotMark">Это не надо тестировать</button>
+              </td>
+            </tr>
+            <tr id="trAB">
+              <td>A/В тестирование</td>
+              <td>
+                <button id="btnMinusAB" type="button" class="btn btn-outline-secondary btn-sm">-</button>
+                <span id="tdSpanAB">1</span>
+                <button id="btnPlusAB" type="button" class="btn btn-outline-secondary btn-sm">+</button>
+                <button  type="button" class="btn btn-outline-secondary btn-sm" id="btnNotAB">Это не надо тестировать</button>
+              </td>
+            </tr>
+            <tr id="trAD">
+              <td>Тестирование идей</td>
+              <td>
+                <button id="btnMinusAD" type="button" class="btn btn-outline-secondary btn-sm">-</button>
+                <span id="tdSpanAD">1</span>
+                <button id="btnPlusAD" type="button" class=" btn btn-outline-secondary btn-sm ">+</button>
+                <button  type="button" class="btn btn-outline-secondary btn-sm" id="btnNotAD">Это не надо тестировать</button>
               </td>
             </tr>
           </tbody>
@@ -650,18 +710,17 @@
             Добавить еще тестирование
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Тестирование Frontend</a>
-            <a class="dropdown-item" href="#">Тестирование API</a>
-            <a class="dropdown-item" href="#">Тестирование Backend</a>
-            <a class="dropdown-item" href="#">Тестирование приложений</a>
-            <a class="dropdown-item" href="#">Тестирование безопасность</a>
-            <a class="dropdown-item" href="#">Нагрузочное тестирование</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Тестирование рынка</a>
-            <a class="dropdown-item" href="#">A/В тестирование</a>
-            <a class="dropdown-item" href="#">Тестирование идей</a>
+            <a class="dropdown-item" id="btnAddFront" href="#">Тестирование Frontend</a>
+            <a class="dropdown-item" id="btnAddApi" href="#">Тестирование API</a>
+            <a class="dropdown-item" id="btnAddBack" href="#">Тестирование Backend</a>
+            <a class="dropdown-item" id="btnAddMob" href="#">Тестирование приложений</a>
+            <a class="dropdown-item" id="btnAddBez" href="#">Тестирование безопасности</a>
+            <a class="dropdown-item" id="btnAddStress" href="#">Нагрузочное тестирование</a>
+            <a class="dropdown-item" id="btnAddMark" href="#">Тестирование рынка</a>
+            <a class="dropdown-item" id="btnAddAB" href="#">A/В тестирование</a>
+            <a class="dropdown-item" id="btnAddAD" href="#">Тестирование идей</a>
           </div>
-          <button type="button" class="btn btn-secondary">Тестировать всё</button>
+          <button type="button" class="btn btn-secondary" id="btnAddAll">Тестировать всё</button>
           <p>* Заполните форму для заявки и мы с вами свяжемся</p>
         </div>
       </div>
@@ -714,25 +773,7 @@
     </div>
 
     <script>
-      // let txtPluses = document.getElementsByClassName('txt-plus');
-      //  let txtMinuses = document.getElementsByClassName('txt-minus');
-
-      // for (let i = 0; i < txtPluses.length; i++) {
-      //   let txtPlus = txtPluses[i];
-      //   txtPlus.addEventListener("click", function () { txtPlus.nextElementSibling.setAttribute('visibility', 'visible'); });
-
-      // }
-
-
-      // function txtPlus(nameID) {
-      //   let section = document.getElementById(nameID);
-      //   let spa = section.querySelector('span');
-      //   spa.setAttribute('visibility', 'visible');
-      //   let btnMinus = section.getElementsByClassName('txt-minus');
-      //   btnMinus.setAttribute('visibility', 'visible');
-      //   let btnPlus = section.getElementsByClassName('txt-plus');
-      //   btnMinus.setAttribute('visibility', 'hidden');
-      // }
+      
 
       let btnTxtPlusStress = document.getElementById('btnTxtPlusStress');
       let btnTxtMinusStress = document.getElementById('btnTxtMinusStress');
@@ -753,6 +794,306 @@
       let btnTxtMinusFront = document.getElementById('btnTxtMinusFront');
       let spanTxtFront = document.getElementById('spanTxtFront');
 
+      let trFront = document.getElementById('trFront');
+      let trBack =  document.getElementById('trBack');
+      let trApi = document.getElementById('trApi');
+      let trBez =  document.getElementById('trBez');
+      let trMob = document.getElementById('trMob');
+      let trStress =  document.getElementById('trStress');
+      let trMark = document.getElementById('trMark');
+      let trAB = document.getElementById('trAB');
+      let trAD = document.getElementById('trAD');
+      
+      
+      let btnAddFront = document.getElementById('btnAddFront');
+      let btnAddBack =  document.getElementById('btnAddBack');
+      let btnAddApi = document.getElementById('btnAddApi');
+      let btnAddBez =  document.getElementById('btnAddBez');
+      let btnAddMob = document.getElementById('btnAddMob');
+      let btnAddStress =  document.getElementById('btnAddStress');
+      let btnAddMark = document.getElementById('btnAddMark');
+      let btnAddAB = document.getElementById('btnAddAB');
+      let btnAddAD = document.getElementById('btnAddAD');
+
+      let btnNotFront = document.getElementById('btnNotFront');
+
+      let tdSpanFront = document.getElementById('tdSpanFront');
+      let tdSpanApi = document.getElementById('tdSpanApi');
+      let tdSpanBack = document.getElementById('tdSpanBack');
+      let tdSpanMob = document.getElementById('tdSpanMob');
+      let tdSpanBez = document.getElementById('tdSpanBez');
+      let tdSpanStress = document.getElementById('tdSpanStress');
+
+
+
+
+
+
+      let btnPlusFront = document.getElementById('btnPlusFront');
+      let btnMinusFront = document.getElementById('btnMinusFront');
+
+
+
+
+      btnPlusFront.onclick = function() {
+        let num = tdSpanFront.textContent;
+        tdSpanFront.textContent=+num+1;
+      }
+
+      btnMinusFront.onclick = function() {
+        let num = tdSpanFront.textContent;
+        if(num>1) tdSpanFront.textContent=+num-1;
+        else alert('Для тестирования нужен минимум один тестировщик!');
+      }
+
+      btnNotFront.onclick = function() {
+        trFront.setAttribute('style', 'display: none;');
+        tdSpanFront.textContent='1';
+      }
+
+      btnPlusApi.onclick = function() {
+        let num = tdSpanApi.textContent;
+        tdSpanApi.textContent=+num+1;
+      }
+
+      btnMinusApi.onclick = function() {
+        let num = tdSpanApi.textContent;
+        if(num>1) tdSpanApi.textContent=+num-1;
+        else alert('Для тестирования нужен минимум один тестировщик!');
+      }
+
+      btnNotApi.onclick = function() {
+        trApi.setAttribute('style', 'display: none;');
+        tdSpanApi.textContent='1';
+      }
+
+      btnPlusBack.onclick = function() {
+        let num = tdSpanBack.textContent;
+        tdSpanBack.textContent=+num+1;
+      }
+
+      btnMinusBack.onclick = function() {
+        let num = tdSpanBack.textContent;
+        if(num>1) tdSpanBack.textContent=+num-1;
+        else alert('Для тестирования нужен минимум один тестировщик!');
+      }
+
+      btnNotBack.onclick = function() {
+        trBack.setAttribute('style', 'display: none;');
+        tdSpanBack.textContent='1';
+      }
+
+      btnPlusMob.onclick = function() {
+        let num = tdSpanMob.textContent;
+        tdSpanMob.textContent=+num+1;
+      }
+
+      btnMinusMob.onclick = function() {
+        let num = tdSpanMob.textContent;
+        if(num>1) tdSpanMob.textContent=+num-1;
+        else alert('Для тестирования нужен минимум один тестировщик!');
+      }
+
+      btnNotMob.onclick = function() {
+        trMob.setAttribute('style', 'display: none;');
+        tdSpanMob.textContent='1';
+      }
+      
+      btnPlusBez.onclick = function() {
+        let num = tdSpanBez.textContent;
+        tdSpanBez.textContent=+num+1;
+      }
+
+      btnMinusBez.onclick = function() {
+        let num = tdSpanBez.textContent;
+        if(num>1) tdSpanBez.textContent=+num-1;
+        else alert('Для тестирования нужен минимум один тестировщик!');
+      }
+
+      btnNotBez.onclick = function() {
+        trBez.setAttribute('style', 'display: none;');
+        tdSpanBez.textContent='1';
+      }
+
+      btnPlusStress.onclick = function() {
+        let num = tdSpanStress.textContent;
+        tdSpanStress.textContent=+num+1;
+      }
+
+      btnMinusStress.onclick = function() {
+        let num = tdSpanStress.textContent;
+        if(num>1) tdSpanStress.textContent=+num-1;
+        else alert('Для тестирования нужен минимум один тестировщик!');
+      }
+
+      btnNotStress.onclick = function() {
+        trStress.setAttribute('style', 'display: none;');
+        tdSpanStress.textContent='1';
+      }
+
+      btnPlusMark.onclick = function() {
+        let num = tdSpanMark.textContent;
+        tdSpanMark.textContent=+num+1;
+      }
+
+      btnMinusMark.onclick = function() {
+        let num = tdSpanMark.textContent;
+        if(num>1) tdSpanMark.textContent=+num-1;
+        else alert('Для тестирования нужен минимум один тестировщик!');
+      }
+
+      btnNotMark.onclick = function() {
+        trMark.setAttribute('style', 'display: none;');
+        tdSpanMark.textContent='1';
+      }
+
+      btnPlusAD.onclick = function() {
+        let num = tdSpanAD.textContent;
+        tdSpanAD.textContent=+num+1;
+      }
+
+      btnMinusAD.onclick = function() {
+        let num = tdSpanAD.textContent;
+        if(num>1) tdSpanAD.textContent=+num-1;
+        else alert('Для тестирования нужен минимум один тестировщик!');
+      }
+
+      btnNotAD.onclick = function() {
+        trAD.setAttribute('style', 'display: none;');
+        tdSpanAD.textContent='1';
+      }
+      btnPlusAB.onclick = function() {
+        let num = tdSpanAB.textContent;
+        tdSpanAB.textContent=+num+1;
+      }
+
+      btnMinusAB.onclick = function() {
+        let num = tdSpanAB.textContent;
+        if(num>1) tdSpanAB.textContent=+num-1;
+        else alert('Для тестирования нужен минимум один тестировщик!');
+      }
+
+      btnNotAB.onclick = function() {
+        trAB.setAttribute('style', 'display: none;');
+        tdSpanAB.textContent='1';
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      btnAdd2Front.onclick = function btnAddFront() {
+        trFront.setAttribute('style', 'display: inline;');
+        btnAddFront.setAttribute('style', 'visibility:hiden;');
+      }
+
+      btnAdd2Api.onclick = function btnAddApi() {
+        trApi.setAttribute('style', 'display: inline;');
+        btnAddApi.setAttribute('style', 'display: none;');
+      }
+      btnAdd2Back.onclick = function btnAddBack() {
+        trBack.setAttribute('style', 'display: inline;');
+        btnAddBack.setAttribute('style', 'display: none;');
+      }
+      btnAdd2Mob.onclick = function btnAddMob() {
+        trMob.setAttribute('style', 'display: inline;');
+        btnAddMob.setAttribute('style', 'display: none;');
+      }
+      btnAdd2Bez.onclick = function btnAddBez() {
+        trBez.setAttribute('style', 'display: inline;');
+        btnAddBez.setAttribute('style', 'display: none;');
+      }
+      btnAdd2Stress.onclick = function btnAddStress() {
+        trStress.setAttribute('style', 'display: inline;');
+        btnAddStress.setAttribute('style', 'display: none;');
+      }
+      btnAdd2Mark.onclick = function btnAddMark() {
+        trMark.setAttribute('style', 'display: inline;');
+        btnAddMark.setAttribute('style', 'display: none;');
+      }
+      btnAdd2AB.onclick = function btnAddAB() {
+        trAB.setAttribute('style', 'display: inline;');
+        btnAddAB.setAttribute('style', 'display: none;');
+      }
+      btnAdd2AD.onclick = function btnAdAD() {
+        trAD.setAttribute('style', 'display: inline;');
+        btnAddAD.setAttribute('style', 'display: none;');
+      }
+
+      
+
+      // btnAdd2Front.onclick = btnAddFront();
+      // btnAdd2Api.onclick = btnAddApi();
+      // btnAdd2Back.onclick = btnAddBack();
+      // btnAdd2Bez.onclick = btnAddBez();
+      // btnAdd2Mob.onclick = btnAddMob();
+      // btnAdd2Stress.onclick = btnAddStress();
+       
+
+      btnAddFront.onclick = function btnAddFront() {
+        trFront.setAttribute('style', 'display: inline;');
+        btnAddFront.setAttribute('style', 'visibility:hiden;');
+      }
+
+      btnAddApi.onclick = function btnAddApi() {
+        trApi.setAttribute('style', 'display: inline;');
+        btnAddApi.setAttribute('style', 'display: none;');
+      }
+      btnAddBack.onclick = function btnAddBack() {
+        trBack.setAttribute('style', 'display: inline;');
+        btnAddBack.setAttribute('style', 'display: none;');
+      }
+      btnAddMob.onclick = function btnAddMob() {
+        trMob.setAttribute('style', 'display: inline;');
+        btnAddMob.setAttribute('style', 'display: none;');
+      }
+      btnAddBez.onclick = function btnAddBez() {
+        trBez.setAttribute('style', 'display: inline;');
+        btnAddBez.setAttribute('style', 'display: none;');
+      }
+      btnAddStress.onclick = function btnAddStress() {
+        trStress.setAttribute('style', 'display: inline;');
+        btnAddStress.setAttribute('style', 'display: none;');
+      }
+      btnAddMark.onclick = function btnAddMark() {
+        trMark.setAttribute('style', 'display: inline;');
+        btnAddMark.setAttribute('style', 'display: none;');
+      }
+      btnAddAB.onclick = function btnAddAB() {
+        trAB.setAttribute('style', 'display: inline;');
+        btnAddAB.setAttribute('style', 'display: none;');
+      }
+      btnAddAD.onclick = function btnAdAD() {
+        trAD.setAttribute('style', 'display: inline;');
+        btnAddAD.setAttribute('style', 'display: none;');
+      }
+
+      btnAddAll.onclick = function btnAddStress() {
+        trStress.setAttribute('style', 'display: inline;');
+        trBez.setAttribute('style', 'display: inline;');
+        trMob.setAttribute('style', 'display: inline;');
+        trBack.setAttribute('style', 'display: inline;');
+        trApi.setAttribute('style', 'display: inline;');
+        trFront.setAttribute('style', 'display: inline;');
+        trAB.setAttribute('style', 'display: inline;');
+        trAD.setAttribute('style', 'display: inline;');
+        trMark.setAttribute('style', 'display: inline;');
+      }
 
 
 
