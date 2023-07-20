@@ -625,7 +625,7 @@ tr {
               <td>Тестирование Frontend</td>
               <td>
                 <button id="btnMinusFront" type="button" class="btn btn-outline-secondary btn-sm">-</button>
-                <span id="tdSpanFront">1</span>
+                <span id="tdSpanFront" class="tdSpan">1</span>
                 <button id="btnPlusFront" type="button" class="btn btn-outline-secondary btn-sm">+</button>
                 <button type="button" class="btn btn-outline-secondary btn-sm" id="btnNotFront">Это не надо тестировать</button>
               </td>
@@ -634,7 +634,7 @@ tr {
               <td>Тестирование API</td>
               <td>
                 <button id="btnMinusApi" type="button" class="btn btn-outline-secondary btn-sm">-</button>
-                <span id="tdSpanApi">1</span>
+                <span id="tdSpanApi" class="tdSpan">1</span>
                 <button id="btnPlusApi" type="button" class="btn btn-outline-secondary btn-sm">+</button>
                 <button type="button" class="btn btn-outline-secondary btn-sm" id="btnNotApi">Это не надо тестировать</button>
               </td>
@@ -643,7 +643,7 @@ tr {
               <td>Тестирование Backend</td>
               <td>
                 <button id="btnMinusBack" type="button" class="btn btn-outline-secondary btn-sm">-</button>
-                <span id="tdSpanBack">1</span>
+                <span id="tdSpanBack" class="tdSpan">1</span>
                 <button id="btnPlusBack" type="button" class=" btn btn-outline-secondary btn-sm ">+</button>
                 <button type="button" class="btn btn-outline-secondary btn-sm" id="btnNotBack">Это не надо тестировать</button>
               </td>
@@ -652,7 +652,7 @@ tr {
               <td>Тестирование безопасности</td>
               <td>
                 <button id="btnMinusBez" type="button" class="btn btn-outline-secondary btn-sm">-</button>
-                <span id="tdSpanBez">1</span>
+                <span id="tdSpanBez" class="tdSpan">1</span>
                 <button id="btnPlusBez" type="button" class="btn btn-outline-secondary btn-sm">+</button>
                 <button  type="button" class="btn btn-outline-secondary btn-sm" id="btnNotBez">Это не надо тестировать</button>
               </td>
@@ -661,7 +661,7 @@ tr {
               <td>Тестирование приложений</td>
               <td>
                 <button id="btnMinusMob" type="button" class="btn btn-outline-secondary btn-sm">-</button>
-                <span id="tdSpanMob">1</span>
+                <span id="tdSpanMob" class="tdSpan">1</span>
                 <button id="btnPlusMob" type="button" class="btn btn-outline-secondary btn-sm">+</button>
                 <button  type="button" class="btn btn-outline-secondary btn-sm" id="btnNotMob">Это не надо тестировать</button>
               </td>
@@ -670,7 +670,7 @@ tr {
               <td>Нагрузочное тестирование</td>
               <td>
                 <button id="btnMinusStress" type="button" class="btn btn-outline-secondary btn-sm">-</button>
-                <span id="tdSpanStress">1</span>
+                <span id="tdSpanStress" class="tdSpan">1</span>
                 <button id="btnPlusStress" type="button" class=" btn btn-outline-secondary btn-sm ">+</button>
                 <button  type="button" class="btn btn-outline-secondary btn-sm" id="btnNotStress">Это не надо тестировать</button>
               </td>
@@ -679,7 +679,7 @@ tr {
               <td>Тестирование рынка</td>
               <td>
                 <button id="btnMinusMark" type="button" class="btn btn-outline-secondary btn-sm">-</button>
-                <span id="tdSpanMark">1</span>
+                <span id="tdSpanMark" class="tdSpan">1</span>
                 <button id="btnPlusMark" type="button" class="btn btn-outline-secondary btn-sm">+</button>
                 <button  type="button" class="btn btn-outline-secondary btn-sm" id="btnNotMark">Это не надо тестировать</button>
               </td>
@@ -688,7 +688,7 @@ tr {
               <td>A/В тестирование</td>
               <td>
                 <button id="btnMinusAB" type="button" class="btn btn-outline-secondary btn-sm">-</button>
-                <span id="tdSpanAB">1</span>
+                <span id="tdSpanAB" class="tdSpan">1</span>
                 <button id="btnPlusAB" type="button" class="btn btn-outline-secondary btn-sm">+</button>
                 <button  type="button" class="btn btn-outline-secondary btn-sm" id="btnNotAB">Это не надо тестировать</button>
               </td>
@@ -697,7 +697,7 @@ tr {
               <td>Тестирование идей</td>
               <td>
                 <button id="btnMinusAD" type="button" class="btn btn-outline-secondary btn-sm">-</button>
-                <span id="tdSpanAD">1</span>
+                <span id="tdSpanAD" class="tdSpan">1</span>
                 <button id="btnPlusAD" type="button" class=" btn btn-outline-secondary btn-sm ">+</button>
                 <button  type="button" class="btn btn-outline-secondary btn-sm" id="btnNotAD">Это не надо тестировать</button>
               </td>
@@ -726,29 +726,32 @@ tr {
       </div>
       <div class="col-md-5">
         <h4 class="text-center">Форма обратной связи</h4>
-        <div action="">
+        <form action="" method="post" id="form">
           <div class="form-group mb-2">
-            <input type="email" class="form-control form-control-lg" placeholder="E-mail" required />
+            <input id="email" type="email" class="form-control form-control-lg" placeholder="Email" value=""/>
+            <p id="smallEmail" style="display: none;">Должно быть заполнено поле Email или телефон</p>
           </div>
           <div class="form-group mb-2">
-            <input type="tel" class="form-control form-control-lg" placeholder="tel" required />
+            <input id="tel" type="tel" class="form-control form-control-lg" placeholder="Телефон" value="" />
           </div>
           <div class="form-group mb-2">
-            <input type="text" class="form-control form-control-lg" placeholder="Ваше имя" required />
+            <input type="text" class="form-control form-control-lg" placeholder="Ваше имя" />
+            <input type="hidden" id="hidden" name="hidden" value="">
           </div>
           <div class="form-group">
-            <textarea class="form-control" rows="3" placeholder="Ваше сообщение"></textarea>
+            <textarea id="textArea" class="form-control" rows="3" placeholder="Напишите сообщение"></textarea>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <input class="form-check-input" type="checkbox" id="checkBox" value="" id="defaultCheck1">
             <label class="form-check-label" for="defaultCheck1">
               Согласие на обработку персональных данных
             </label>
+            <p id="smallCheck" style="display: none;">Поставьте галочку о согласии на обработку персональных данных для отправки формы</p>
           </div>
           <div class="form-group">
-            <input type="submit" class="btn btn-info btn-lg" />
+            <input type="submit" class="btn btn-info btn-lg" value="Отправить" id="btnSubmit"/>
           </div>
-        </div>
+        </form>
       </div>
     </div>
     <hr>
@@ -759,6 +762,7 @@ tr {
       <div class="row">
         <div class="col-md-7">
           <h3>Карта</h3>
+          <iframe src="https://www.google.com/maps/d/embed?mid=1B7xHlB6oPVhmRIBMGm3rEc5QMXDMnAQ&ehbc=2E312F" width="440" height="280"></iframe>
         </div>
         <div class="col-md-5">
           <h3 class="text-center">Контакты</h3>
@@ -773,56 +777,86 @@ tr {
     </div>
 
     <script>
+
+
+
+
+btnSubmit.onclick = function() {
+        let tdSpans=document.getElementsByClassName('tdSpan');
+        let trs=document.getElementsByTagName('tr');
+        let arr=[];
+        for(let i=0; i<trs.length; i++) {
+          let tdSpan=tdSpans[i];
+          let tr=trs[i];
+          if(getComputedStyle(tr).display == 'inline') {
+            arr.push(tdSpan);
+          }
+        }
+        hidden.setAttribute('value', arr);
+          let textAreaText = textArea.textContent;
+          textArea.textContent=textAreaText+arr;
+       let msgEmail= document.getElementById('email').value;
+       let msgTel= document.getElementById('tel').value;
+       let checkBx= document.getElementById('checkBox');
+        if(msgEmail=='' && msgTel=='') {smallEmail.setAttribute('style', 'display: inline;');
+        } else if (!checkBx.hasAttribute('checked')) {smallCheck.setAttribute('style', 'display: block;');}
+        else {
+          hidden.setAttribute('value', arr);
+          console.log(hidden);
+          let textAreaText = textArea.textContent;
+          textArea.textContent=textAreaText+arr;
+        }
+      }
+
+
+      // let btnTxtPlusStress = document.getElementById('btnTxtPlusStress');
+      // let btnTxtMinusStress = document.getElementById('btnTxtMinusStress');
+      // let spanTxtStress = document.getElementById('spanTxtStress');
+      // let btnTxtPlusMob = document.getElementById('btnTxtPlusMob');
+      // let btnTxtMinusMob = document.getElementById('btnTxtMinusMob');
+      // let spanTxtMob = document.getElementById('spanTxtMob');
+      // let btnTxtPlusBez = document.getElementById('btnTxtPlusBez');
+      // let btnTxtMinusBez = document.getElementById('btnTxtMinusBez');
+      // let spanTxtBez = document.getElementById('spanTxtBez');
+      // let btnTxtPlusApi = document.getElementById('btnTxtPlusApi');
+      // let btnTxtMinusApi = document.getElementById('btnTxtMinusApi');
+      // let spanTxtApi = document.getElementById('spanTxtApi');
+      // let btnTxtPlusBack = document.getElementById('btnTxtPlusBack');
+      // let btnTxtMinusBack = document.getElementById('btnTxtMinusBack');
+      // let spanTxtBack = document.getElementById('spanTxtBack');
+      // let btnTxtPlusFront = document.getElementById('btnTxtPlusFront');
+      // let btnTxtMinusFront = document.getElementById('btnTxtMinusFront');
+      // let spanTxtFront = document.getElementById('spanTxtFront');
+
+      // let trFront = document.getElementById('trFront');
+      // let trBack =  document.getElementById('trBack');
+      // let trApi = document.getElementById('trApi');
+      // let trBez =  document.getElementById('trBez');
+      // let trMob = document.getElementById('trMob');
+      // let trStress =  document.getElementById('trStress');
+      // let trMark = document.getElementById('trMark');
+      // let trAB = document.getElementById('trAB');
+      // let trAD = document.getElementById('trAD');
       
-
-      let btnTxtPlusStress = document.getElementById('btnTxtPlusStress');
-      let btnTxtMinusStress = document.getElementById('btnTxtMinusStress');
-      let spanTxtStress = document.getElementById('spanTxtStress');
-      let btnTxtPlusMob = document.getElementById('btnTxtPlusMob');
-      let btnTxtMinusMob = document.getElementById('btnTxtMinusMob');
-      let spanTxtMob = document.getElementById('spanTxtMob');
-      let btnTxtPlusBez = document.getElementById('btnTxtPlusBez');
-      let btnTxtMinusBez = document.getElementById('btnTxtMinusBez');
-      let spanTxtBez = document.getElementById('spanTxtBez');
-      let btnTxtPlusApi = document.getElementById('btnTxtPlusApi');
-      let btnTxtMinusApi = document.getElementById('btnTxtMinusApi');
-      let spanTxtApi = document.getElementById('spanTxtApi');
-      let btnTxtPlusBack = document.getElementById('btnTxtPlusBack');
-      let btnTxtMinusBack = document.getElementById('btnTxtMinusBack');
-      let spanTxtBack = document.getElementById('spanTxtBack');
-      let btnTxtPlusFront = document.getElementById('btnTxtPlusFront');
-      let btnTxtMinusFront = document.getElementById('btnTxtMinusFront');
-      let spanTxtFront = document.getElementById('spanTxtFront');
-
-      let trFront = document.getElementById('trFront');
-      let trBack =  document.getElementById('trBack');
-      let trApi = document.getElementById('trApi');
-      let trBez =  document.getElementById('trBez');
-      let trMob = document.getElementById('trMob');
-      let trStress =  document.getElementById('trStress');
-      let trMark = document.getElementById('trMark');
-      let trAB = document.getElementById('trAB');
-      let trAD = document.getElementById('trAD');
       
-      
-      let btnAddFront = document.getElementById('btnAddFront');
-      let btnAddBack =  document.getElementById('btnAddBack');
-      let btnAddApi = document.getElementById('btnAddApi');
-      let btnAddBez =  document.getElementById('btnAddBez');
-      let btnAddMob = document.getElementById('btnAddMob');
-      let btnAddStress =  document.getElementById('btnAddStress');
-      let btnAddMark = document.getElementById('btnAddMark');
-      let btnAddAB = document.getElementById('btnAddAB');
-      let btnAddAD = document.getElementById('btnAddAD');
+      // let btnAddFront = document.getElementById('btnAddFront');
+      // let btnAddBack =  document.getElementById('btnAddBack');
+      // let btnAddApi = document.getElementById('btnAddApi');
+      // let btnAddBez =  document.getElementById('btnAddBez');
+      // let btnAddMob = document.getElementById('btnAddMob');
+      // let btnAddStress =  document.getElementById('btnAddStress');
+      // let btnAddMark = document.getElementById('btnAddMark');
+      // let btnAddAB = document.getElementById('btnAddAB');
+      // let btnAddAD = document.getElementById('btnAddAD');
 
-      let btnNotFront = document.getElementById('btnNotFront');
+      // let btnNotFront = document.getElementById('btnNotFront');
 
-      let tdSpanFront = document.getElementById('tdSpanFront');
-      let tdSpanApi = document.getElementById('tdSpanApi');
-      let tdSpanBack = document.getElementById('tdSpanBack');
-      let tdSpanMob = document.getElementById('tdSpanMob');
-      let tdSpanBez = document.getElementById('tdSpanBez');
-      let tdSpanStress = document.getElementById('tdSpanStress');
+      // let tdSpanFront = document.getElementById('tdSpanFront');
+      // let tdSpanApi = document.getElementById('tdSpanApi');
+      // let tdSpanBack = document.getElementById('tdSpanBack');
+      // let tdSpanMob = document.getElementById('tdSpanMob');
+      // let tdSpanBez = document.getElementById('tdSpanBez');
+      // let tdSpanStress = document.getElementById('tdSpanStress');
 
 
 
@@ -832,6 +866,9 @@ tr {
       let btnPlusFront = document.getElementById('btnPlusFront');
       let btnMinusFront = document.getElementById('btnMinusFront');
 
+
+
+    
 
 
 
@@ -1174,9 +1211,8 @@ tr {
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
       integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
       crossorigin="anonymous"></script>
