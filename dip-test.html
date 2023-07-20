@@ -282,7 +282,7 @@
   <div class="container" id="test">
     <h2 class="nav justify-content-center">Что тестируем?</h2><br>
     <div class="row row-cols-1 row-cols-md-1">
-      <div class="card mb-3"  id="front">
+      <div class="card mb-3" id="front">
         <div class="row no-gutters">
           <div class="col-md-4">
             <img src="..." alt="...">
@@ -291,14 +291,27 @@
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="card-title">Тестирование Frontend</h5>
-              <p class="card-text">Тестирование Frontend - это процесс проверки корректности работы пользовательского интерфейса веб-приложения, а также функциональности, доступной для пользователя. Во время тестирования Frontend обычно проверяются такие аспекты, как верстка, отображение элементов, интерактивность и навигация по сайту, а также совместимость с различными браузерами и устройствами. Для тестирования Frontend используются такие инструменты, как Selenium, Cypress, Jest и другие.</p>
-              <a href="#" class="btn btn-secondary btn-sm disabled" tabindex="-1" role="button"
-                aria-disabled="true">Подробнее</a>
+              <p class="card-text">Тестирование Frontend - это процесс проверки корректности работы пользовательского
+                интерфейса веб-приложения, а также функциональности, доступной для пользователя. Во время тестирования
+                Frontend обычно проверяются такие аспекты, как верстка, отображение элементов, интерактивность и
+                навигация по сайту, а также совместимость с различными браузерами и устройствами. Для тестирования
+                Frontend используются такие инструменты, как Selenium, Cypress, Jest и другие. <button type="button"
+                  class="btn btn-outline-secondary txt-plus" id="btnTxtPlusFront">Подробнее</button>
+                <span id="spanTxtFront" style="display: none;;">Тестирование Frontend является важной частью
+                  разработки
+                  веб-приложений и включает в себя проверку внешнего вида и работоспособности интерфейса пользователя.
+                  Оно обеспечивает правильную работу всех элементов, включая кнопки, ссылки, поля ввода, а также
+                  проверяет правильность отображения контента на различных устройствах и браузерах. Тестирование
+                  Frontend осуществляется с помощью инструментов, которые позволяют автоматически проверять
+                  функциональность и внешний вид веб-страниц.</span>
+                <button type="button" style="display: none;;" class="btn btn-outline-secondary txt-minus"
+                  id="btnTxtMinusFront">Свернуть</button>
+              </p>
             </div>
           </div>
         </div>
       </div>
-      <div class="card mb" id="beck">
+      <div class="card mb" id="back">
         <div class="row no-gutters">
           <div class="col-md-8">
             <div class="card-body">
@@ -307,9 +320,16 @@
                 приложения, которая обрабатывает данные, осуществляет бизнес-логику и взаимодействует с базами данных и
                 другими системами. Во время тестирования Backend проверяются такие аспекты, как работоспособность API,
                 правильность обработки данных, безопасность, производительность и масштабируемость. Для тестирования
-                Backend используются такие инструменты, как JUnit, TestNG, PHPUnit и другие.</p>
-              <a href="#" class="btn btn-secondary btn-sm disabled" tabindex="-1" role="button"
-                aria-disabled="true">Подробнее</a>
+                Backend используются такие инструменты, как JUnit, TestNG, PHPUnit и другие.<button type="button"
+                  class="btn btn-outline-secondary txt-plus" id="btnTxtPlusBack">Подробнее</button>
+                <span id="spanTxtBack" style="display: none;;">Тестирование Backend включает в себя проверку
+                  правильности работы серверной части приложения, такой как база данных, серверы приложений, API и
+                  другие компоненты. Оно включает в себя проверку работы логики приложения, обработки данных,
+                  безопасности и производительности. Тестирование Backend выполняется как ручным способом, так и
+                  автоматизированно с помощью специальных инструментов.</span>
+                <button type="button" style="display: none;;" class="btn btn-outline-secondary txt-minus"
+                  id="btnTxtMinusBack">Свернуть</button>
+              </p>
             </div>
           </div>
           <div class="col-md-4">
@@ -331,9 +351,15 @@
                 приложения, который позволяет взаимодействовать с другими приложениями или сетями. Во время тестирования
                 API проверяется достоверность и соответствие стандартам запросов и ответов, а также функциональность и
                 безопасность API. Для тестирования API используются такие инструменты, как Postman, SoapUI, RestAssured
-                и другие.</p>
-              <a href="#" class="btn btn-secondary btn-sm disabled" tabindex="-1" role="button"
-                aria-disabled="true">Подробнее</a>
+                и другие.<button type="button" class="btn btn-outline-secondary txt-plus"
+                  id="btnTxtPlusApi">Подробнее</button>
+                <span id="spanTxtApi" style="display: none;;">Тестирование API (Application Programming Interface)
+                  осуществляется для проверки корректности работы интерфейса программного обеспечения, который позволяет
+                  взаимодействовать с другими программами или компонентами. Оно включает проверку правильности передачи
+                  данных по API, работы различных методов и функций, а также обработку ошибок. Тестирование API может
+                  быть как ручным, так и автоматизированным с использованием специальных инструментов.</span>
+                <button type="button" style="display: none;;" class="btn btn-outline-secondary txt-minus"
+                  id="btnTxtMinusApi">Свернуть</button>
             </div>
           </div>
         </div>
@@ -347,9 +373,16 @@
                 атак и утечек данных. Во время тестирования безопасности выполняются различные виды атак, такие как
                 инъекции SQL, переполнения буфера, кросс-сайтовые скрипты и другие, чтобы проверить, насколько хорошо
                 приложение защищено от таких угроз. Для тестирования безопасности используются такие инструменты, как
-                Burp Suite, OWASP ZAP, Nessus и другие.</p>
-              <a href="#" class="btn btn-secondary btn-sm disabled" tabindex="-1" role="button"
-                aria-disabled="true">Подробнее</a>
+                Burp Suite, OWASP ZAP, Nessus и другие.<button type="button" class="btn btn-outline-secondary txt-plus"
+                  id="btnTxtPlusBez">Подробнее</button>
+                <span id="spanTxtBez" style="display: none;;">Тестирование безопасности выполняется с целью обнаружения
+                  уязвимостей и возможных угроз безопасности системы. Оно включает в себя проверку правильности
+                  аутентификации и авторизации пользователей, защиту передачи данных, обработку вредоносного кода и
+                  другие вопросы, связанные с безопасностью. Тестирование безопасности осуществляется с помощью
+                  специальных инструментов и методик, которые помогают выявить возможные уязвимости и проблемы
+                  безопасности.</span>
+                <button type="button" style="display: none;;" class="btn btn-outline-secondary txt-minus"
+                  id="btnTxtMinusBez">Свернуть</button>
             </div>
           </div>
           <div class="col-md-4">
@@ -358,7 +391,7 @@
           </div>
         </div>
       </div>
-      <div class="card mb"  id="mob">
+      <div class="card mb" id="mob">
         <div class="row no-gutters">
           <div class="col-md-4">
             <img src="..." alt="...">
@@ -371,9 +404,16 @@
                 программного обеспечения на мобильных устройствах, таких как смартфоны и планшеты. Во время тестирования
                 мобильных приложений проверяются такие аспекты, как функциональность, совместимость с различными
                 операционными системами, эффективность, производительность и удобство использования. Для тестирования
-                мобильных приложений используются такие инструменты, как Appium, Espresso, XCUITest и другие.</p>
-              <a href="#" class="btn btn-secondary btn-sm disabled" tabindex="-1" role="button"
-                aria-disabled="true">Подробнее</a>
+                мобильных приложений используются такие инструменты, как Appium, Espresso, XCUITest и другие.<button
+                  type="button" class="btn btn-outline-secondary txt-plus" id="btnTxtPlusMob">Подробнее</button>
+                <span id="spanTxtMob" style="display: none;;">Тестирование мобильных приложений – это процесс проверки
+                  функциональности, стабильности и безопасности приложений, предназначенных для различных мобильных
+                  устройств. Оно включает тестирование пользовательского интерфейса, работы сетевых функций,
+                  взаимодействия с другими приложениями и многое другое. Тестирование мобильных приложений включает в
+                  себя как ручное тестирование, так и автоматизацию с использованием специальных инструментов.
+                </span>
+                <button type="button" style="display: none;;" class="btn btn-outline-secondary txt-minus"
+                  id="btnTxtMinusMob">Свернуть</button>
             </div>
           </div>
         </div>
@@ -388,9 +428,15 @@
                 нагрузке, чтобы проверить его способность работать с большим количеством одновременных пользователей или
                 запросов. При тестировании также анализируются показатели производительности, такие как время отклика,
                 пропускная способность и использование ресурсов. Для нагрузочного тестирования используются такие
-                инструменты, как JMeter, LoadRunner, Gatling и другие.</p>
-              <a href="#" class="btn btn-secondary btn-sm disabled" tabindex="-1" role="button"
-                aria-disabled="true">Подробнее</a>
+                инструменты, как JMeter, LoadRunner, Gatling и другие.<button type="button"
+                  class="btn btn-outline-secondary txt-plus" id="btnTxtPlusStress">Подробнее</button>
+                <span id="spanTxtStress" style="display: none;;">Нагрузочное тестирование является процессом проверки
+                  производительности и стабильности системы при высокой нагрузке. Оно используется для определения
+                  ограничений и проблем, возникающих при одновременном доступе большого количества пользователей к
+                  системе. Нагрузочное тестирование позволяет узнать, как система будет работать в реальном мире и может
+                  помочь в оптимизации ее производительности.</span>
+                <button type="button" style="display: none;;" class="btn btn-outline-secondary txt-minus"
+                  id="btnTxtMinusStress">Свернуть</button>
             </div>
           </div>
           <div class="col-md-4">
@@ -413,7 +459,7 @@
           профессионального маркетингового исследования. Мы проведем тщательное тестирование рынка, чтобы вы получили
           ценные инсайты и смогли принять осознанные решения для развития вашего бизнеса. Обратитесь к нам сегодня и
           убедитесь в успешном будущем вашего предприятия!"</p>
-        <button type="button" class="btn btn-secondary">Хочу</button>
+        <button type="button" class="btn btn-secondary" style="visibility: hidden;">Хочу</button>
       </div>
     </div>
     <div class="card">
@@ -524,19 +570,19 @@
               </div>
             </div>
             <div class="carousel-item">
-              <img src="./img/sramota3.jpg" class="d-block " style="height:300px;"  alt="..." />
+              <img src="./img/sramota3.jpg" class="d-block " style="height:300px;" alt="..." />
               <div class="carousel-caption d-none d-md-block">
                 <p>Еще сертификат</p>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="./img/sramota4.jpg" class="d-block " style="height:300px;"  alt="..." />
+              <img src="./img/sramota4.jpg" class="d-block " style="height:300px;" alt="..." />
               <div class="carousel-caption d-none d-md-block">
                 <p>и прочие сертификаты</p>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="./img/sramota5.jpg" class="d-block " style="height:300px;"  alt="..." />
+              <img src="./img/sramota5.jpg" class="d-block " style="height:300px;" alt="..." />
               <div class="carousel-caption d-none d-md-block">
                 <p>Записаться на консультацию</p>
               </div>
@@ -651,28 +697,140 @@
     <!-- футер с картой  и контакты -->
     <div class="container" id="contact">
       <h3 class="nav justify-content-center">Ищите нас на планете Земля</h3><br>
-    <div class="row">
-      <div class="col-md-7">
-        <h3>Карта</h3>
+      <div class="row">
+        <div class="col-md-7">
+          <h3>Карта</h3>
+        </div>
+        <div class="col-md-5">
+          <h3 class="text-center">Контакты</h3>
+          <h3>Сайт:</h3>
+          <p><a href="https://practicum.yandex.ru/career-center/">Сайт карьерного центра</a></p>
+          <h3>Телефон:</h3>
+          <p><a href="tel:+88007009329">8-800-700-93-29</a></p>
+          <h3>График работы:</h3>
+          <p>Круглосуточно</p>
+        </div>
       </div>
-      <div class="col-md-5">
-        <h3 class="text-center">Контакты</h3>
-        <h3>Сайт:</h3>
-        <p><a href="https://practicum.yandex.ru/career-center/">Сайт карьерного центра</a></p>
-        <h3>Телефон:</h3>
-        <p><a href="tel:+88007009329">8-800-700-93-29</a></p>
-        <h3>График работы:</h3>
-        <p>Круглосуточно</p>
-      </div>
-    </div>
     </div>
 
     <script>
+      // let txtPluses = document.getElementsByClassName('txt-plus');
+      //  let txtMinuses = document.getElementsByClassName('txt-minus');
+
+      // for (let i = 0; i < txtPluses.length; i++) {
+      //   let txtPlus = txtPluses[i];
+      //   txtPlus.addEventListener("click", function () { txtPlus.nextElementSibling.setAttribute('visibility', 'visible'); });
+
+      // }
+
+
+      // function txtPlus(nameID) {
+      //   let section = document.getElementById(nameID);
+      //   let spa = section.querySelector('span');
+      //   spa.setAttribute('visibility', 'visible');
+      //   let btnMinus = section.getElementsByClassName('txt-minus');
+      //   btnMinus.setAttribute('visibility', 'visible');
+      //   let btnPlus = section.getElementsByClassName('txt-plus');
+      //   btnMinus.setAttribute('visibility', 'hidden');
+      // }
+
+      let btnTxtPlusStress = document.getElementById('btnTxtPlusStress');
+      let btnTxtMinusStress = document.getElementById('btnTxtMinusStress');
+      let spanTxtStress = document.getElementById('spanTxtStress');
+      let btnTxtPlusMob = document.getElementById('btnTxtPlusMob');
+      let btnTxtMinusMob = document.getElementById('btnTxtMinusMob');
+      let spanTxtMob = document.getElementById('spanTxtMob');
+      let btnTxtPlusBez = document.getElementById('btnTxtPlusBez');
+      let btnTxtMinusBez = document.getElementById('btnTxtMinusBez');
+      let spanTxtBez = document.getElementById('spanTxtBez');
+      let btnTxtPlusApi = document.getElementById('btnTxtPlusApi');
+      let btnTxtMinusApi = document.getElementById('btnTxtMinusApi');
+      let spanTxtApi = document.getElementById('spanTxtApi');
+      let btnTxtPlusBack = document.getElementById('btnTxtPlusBack');
+      let btnTxtMinusBack = document.getElementById('btnTxtMinusBack');
+      let spanTxtBack = document.getElementById('spanTxtBack');
+      let btnTxtPlusFront = document.getElementById('btnTxtPlusFront');
+      let btnTxtMinusFront = document.getElementById('btnTxtMinusFront');
+      let spanTxtFront = document.getElementById('spanTxtFront');
+
+
+
+
+
+
+      btnTxtPlusFront.onclick = function () {
+        spanTxtFront.setAttribute('style', 'display: inline;');
+        btnTxtMinusFront.setAttribute('style', 'display: inline;');
+        btnTxtPlusFront.setAttribute('style', 'display: none;');
+      }
+
+      btnTxtMinusFront.onclick = function () {
+        spanTxtFront.setAttribute('style', 'display: none;');
+        btnTxtMinusFront.setAttribute('style', 'display: none;');
+        btnTxtPlusFront.setAttribute('style', 'display: inline;');
+      }
+      btnTxtPlusStress.onclick = function () {
+        spanTxtStress.setAttribute('style', 'display: inline;');
+        btnTxtMinusStress.setAttribute('style', 'display: inline;');
+        btnTxtPlusStress.setAttribute('style', 'display: none;');
+      }
+
+      btnTxtMinusStress.onclick = function () {
+        spanTxtStress.setAttribute('style', 'display: none;');
+        btnTxtMinusStress.setAttribute('style', 'display: none;');
+        btnTxtPlusStress.setAttribute('style', 'display: inline;');
+      }
+      btnTxtPlusBez.onclick = function () {
+        spanTxtBez.setAttribute('style', 'display: inline;');
+        btnTxtMinusBez.setAttribute('style', 'display: inline;');
+        btnTxtPlusBez.setAttribute('style', 'display: none;');
+      }
+
+      btnTxtMinusBez.onclick = function () {
+        spanTxtBez.setAttribute('style', 'display: none;');
+        btnTxtMinusBez.setAttribute('style', 'display: none;');
+        btnTxtPlusBez.setAttribute('style', 'display: inline;');
+      }
+      btnTxtPlusMob.onclick = function () {
+        spanTxtMob.setAttribute('style', 'display: inline;');
+        btnTxtMinusMob.setAttribute('style', 'display: inline;');
+        btnTxtPlusMob.setAttribute('style', 'display: none;');
+      }
+
+      btnTxtMinusMob.onclick = function () {
+        spanTxtMob.setAttribute('style', 'display: none;');
+        btnTxtMinusMob.setAttribute('style', 'display: none;');
+        btnTxtPlusMob.setAttribute('style', 'display: inline;');
+      }
+      btnTxtPlusApi.onclick = function () {
+        spanTxtApi.setAttribute('style', 'display: inline;');
+        btnTxtMinusApi.setAttribute('style', 'display: inline;');
+        btnTxtPlusApi.setAttribute('style', 'display: none;');
+      }
+
+      btnTxtMinusApi.onclick = function () {
+        spanTxtApi.setAttribute('style', 'display: none;');
+        btnTxtMinusApi.setAttribute('style', 'display: none;');
+        btnTxtPlusApi.setAttribute('style', 'display: inline;');
+      }
+      btnTxtPlusBack.onclick = function () {
+        spanTxtBack.setAttribute('style', 'display: inline;');
+        btnTxtMinusBack.setAttribute('style', 'display: inline;');
+        btnTxtPlusBack.setAttribute('style', 'display: none;');
+      }
+
+      btnTxtMinusBack.onclick = function () {
+        spanTxtBack.setAttribute('style', 'display: none;');
+        btnTxtMinusBack.setAttribute('style', 'display: none;');
+        btnTxtPlusBack.setAttribute('style', 'display: inline;');
+      }
+
+
 
 
 
     </script>
-    
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
