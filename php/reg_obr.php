@@ -1,6 +1,6 @@
 <?php
 session_start();
-header('Content-Type: text/html; charset=utf-8');
+header('Content-Type: text/html; charset=UTF-8');
 
 $mysqli = mysqli_connect("mysql-191622.srv.hoster.ru", "srv191622_admin1", "Gfhjkm1", "srv191622_bd1");
 
@@ -13,6 +13,6 @@ if ($mysqli == false) {
   $hidden = trim(mb_strtolower($_POST["hidden"]));
   $textArea = trim(mb_strtolower($_POST["textarea"]));
 
-  $mysqli->query("INSERT INTO `diplom`(`email`, `tel`, `name`, `text`, `zakaz`) VALUES ('$email', '$tel', '$name', '$textArea', '$hidden')");
+  $mysqli->query("INSERT INTO `diplom3`(`email`, `tel`, `name`, `text`, `zakaz`) VALUES ('$email', '$tel', '$name', '$textArea', '$hidden')");
   echo("success");
 }

@@ -13,15 +13,16 @@
   tr {
     display: none;
   }
-
+  .inline {
+    display:inline;
+  }
 </style>
 </head>
 <body>
  
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-  crossorigin="anonymous"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
   integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
   crossorigin="anonymous"></script>
@@ -39,7 +40,6 @@
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
@@ -81,7 +81,6 @@
         <input class="form-control mr-sm-2" type="search" placeholder="Поиск" aria-label="Поиск">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Поиск</button>
       </form>
-
     </div>
   </nav>
   <div class="fixed-bottom right"><img src="./img/Bag.jpg" class="img-thumbnail" style="width:100px;" alt="баГейтс"></div>
@@ -94,13 +93,13 @@
     <h3 class="nav justify-content-center">Тестируем всё!</h3><br>
     <div class="row row-cols-1 row-cols-md-3">
       <div class="col mb-4">
-        <div class="card h-100">
+        <div class="card ">
           <img src="./img/front1.png" class="card-img-top" alt="Тестирование Frontend">
           <div class="card-body">
             <h5 class="card-title">Тестирование Frontend</h5>
             <p class="card-text">Профессиональное тестирование вашего веб-интерфейса – убедитесь, что ваш сайт работает
               безупречно на любом устройстве и во всех популярных браузерах.</p>
-          </div>
+              <a href="#front" class="btn btn-secondary " >Перейти к разделу</a>          </div>
         </div>
       </div>
       <div class="col mb-4">
@@ -747,7 +746,7 @@
       <!-- Форма -->
       <div class="col-md-5">
         <h4 class="text-center">Форма обратной связи</h4>
-        <form action="./php/reg_obr.php" method="POST" id="form">
+        <form action="./php/reg_obr.php" method="POST" id="thisForm">
           <div class="form-group mb-2">
             <input id="email" name="email" type="email" class="form-control form-control-lg" placeholder="Email" value="" />
             <p id="smallEmail" style="display: none;">Должно быть заполнено поле Email или телефон</p>
@@ -757,13 +756,13 @@
           </div>
           <div class="form-group mb-2">
             <input type="text" name="name" class="form-control form-control-lg" placeholder="Ваше имя" id="name" />
-            <input type="hidden" name="hidden" id="hidden" name="hidden" value=""/>
+            <input type="hidden" name="hidden" id="hidden" value=""/>
           </div>
           <div class="form-group">
-            <textarea id="textArea" name="textarea" class="form-control" rows="3" placeholder="Напишите сообщение"></textarea>
+            <textarea id="textarea" name="textarea" class="form-control" rows="3" placeholder="Напишите сообщение"></textarea>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="checkbox" value="" id="defaultCheck1"  />
+            <input class="form-check-input" type="checkbox" id="checkbox" value=""  />
             <label class="form-check-label" for="checkbox">
               Согласие на обработку персональных данных
             </label>
@@ -771,7 +770,7 @@
               отправки формы</p>
           </div>
           <div class="form-group">
-            <input type="submit" class="btn btn-info btn-lg" value="Отправить" id="btnSubmit" />
+            <input type="submit"  class="btn btn-info btn-lg" value="Отправить" id="btnSubmit" />
           </div>
         </form>
       </div>
@@ -810,7 +809,7 @@
 
 
 $(document).ready(function () {
-    $('#form').submit(function (e) {
+    $('#thisForm').submit(function (e) {
       e.preventDefault();
       var form = $(this);
       var actionUrl = form.attr('action');
@@ -833,82 +832,31 @@ $(document).ready(function () {
       let tdSpans = document.getElementsByClassName('tdSpan');
       let trs = document.getElementsByTagName('tr');
       let arr = [];
-      for (let i = 0; i < trs.length; i++) {
-        let tdSpan = tdSpans[i];
+
+     
+      for (let i = 1; i < trs.length; i++) {
+        let tdSpn = tdSpans[i-1];
         let tr = trs[i];
-        if (getComputedStyle(tr).display == 'inline') {
-          arr.push(tdSpan);
+        let boolInline = tr.classList.contains('inline');
+        if (boolInline) {
+          let txtSpan=tdSpn.textContent;
+          let idSpan=tdSpn.getAttribute("id");
+          let strin="Name testing is "+idSpan+" in number "+txtSpan;
+          arr.push(strin);
         }
-      }
-      hidden.setAttribute('value', arr);
+      };
+
       let msgEmail = document.getElementById('email').value;
       let msgTel = document.getElementById('tel').value;
       let checkbx = document.getElementById('checkbox');
-      let boolcheck =checkbx.hasAttribute('checked');
-      if (msgEmail == '' && msgTel == '') {
-        smallEmail.setAttribute('style', 'display: inline;'); } 
-      else if (!boolcheck) { smallCheck.setAttribute('style', 'display: block;'); }
-      else {
-        let arrStr = arr.toString();
+      let boolCheck = checkbx.hasAttribute('checked');
+      if (!boolCheck) { smallCheck.setAttribute('style', 'display: block;'); }
+      if (msgEmail == '' && msgTel == '') {smallEmail.setAttribute('style', 'display: inline;'); } 
+        let arrStr = arr.join(', ');
         hidden.setAttribute('value',arrStr);
-        console.log(arr);
-        
-       // let textAreaText = textArea.textContent;
-       // textArea.textContent = textAreaText + arr;
-      }
-    }
-
-    // let btnTxtPlusStress = document.getElementById('btnTxtPlusStress');
-    // let btnTxtMinusStress = document.getElementById('btnTxtMinusStress');
-    // let spanTxtStress = document.getElementById('spanTxtStress');
-    // let btnTxtPlusMob = document.getElementById('btnTxtPlusMob');
-    // let btnTxtMinusMob = document.getElementById('btnTxtMinusMob');
-    // let spanTxtMob = document.getElementById('spanTxtMob');
-    // let btnTxtPlusBez = document.getElementById('btnTxtPlusBez');
-    // let btnTxtMinusBez = document.getElementById('btnTxtMinusBez');
-    // let spanTxtBez = document.getElementById('spanTxtBez');
-    // let btnTxtPlusApi = document.getElementById('btnTxtPlusApi');
-    // let btnTxtMinusApi = document.getElementById('btnTxtMinusApi');
-    // let spanTxtApi = document.getElementById('spanTxtApi');
-    // let btnTxtPlusBack = document.getElementById('btnTxtPlusBack');
-    // let btnTxtMinusBack = document.getElementById('btnTxtMinusBack');
-    // let spanTxtBack = document.getElementById('spanTxtBack');
-    // let btnTxtPlusFront = document.getElementById('btnTxtPlusFront');
-    // let btnTxtMinusFront = document.getElementById('btnTxtMinusFront');
-    // let spanTxtFront = document.getElementById('spanTxtFront');
-
-    // let trFront = document.getElementById('trFront');
-    // let trBack =  document.getElementById('trBack');
-    // let trApi = document.getElementById('trApi');
-    // let trBez =  document.getElementById('trBez');
-    // let trMob = document.getElementById('trMob');
-    // let trStress =  document.getElementById('trStress');
-    // let trMark = document.getElementById('trMark');
-    // let trAB = document.getElementById('trAB');
-    // let trAD = document.getElementById('trAD');
-
-
-    // let btnAddFront = document.getElementById('btnAddFront');
-    // let btnAddBack =  document.getElementById('btnAddBack');
-    // let btnAddApi = document.getElementById('btnAddApi');
-    // let btnAddBez =  document.getElementById('btnAddBez');
-    // let btnAddMob = document.getElementById('btnAddMob');
-    // let btnAddStress =  document.getElementById('btnAddStress');
-    // let btnAddMark = document.getElementById('btnAddMark');
-    // let btnAddAB = document.getElementById('btnAddAB');
-    // let btnAddAD = document.getElementById('btnAddAD');
-
-    // let btnNotFront = document.getElementById('btnNotFront');
-
-    // let tdSpanFront = document.getElementById('tdSpanFront');
-    // let tdSpanApi = document.getElementById('tdSpanApi');
-    // let tdSpanBack = document.getElementById('tdSpanBack');
-    // let tdSpanMob = document.getElementById('tdSpanMob');
-    // let tdSpanBez = document.getElementById('tdSpanBez');
-    // let tdSpanStress = document.getElementById('tdSpanStress');
-
-
-
+      
+    };
+    
 
 
 
@@ -933,7 +881,7 @@ $(document).ready(function () {
     }
 
     btnNotFront.onclick = function () {
-      trFront.setAttribute('style', 'display: none;');
+      trFront.classList.remove('inline');
       tdSpanFront.textContent = '1';
     }
 
@@ -949,7 +897,7 @@ $(document).ready(function () {
     }
 
     btnNotApi.onclick = function () {
-      trApi.setAttribute('style', 'display: none;');
+      trApi.classList.remove('inline');
       tdSpanApi.textContent = '1';
     }
 
@@ -965,7 +913,7 @@ $(document).ready(function () {
     }
 
     btnNotBack.onclick = function () {
-      trBack.setAttribute('style', 'display: none;');
+      trBack.classList.remove('inline');
       tdSpanBack.textContent = '1';
     }
 
@@ -981,7 +929,7 @@ $(document).ready(function () {
     }
 
     btnNotMob.onclick = function () {
-      trMob.setAttribute('style', 'display: none;');
+      trMob.classList.remove('inline');
       tdSpanMob.textContent = '1';
     }
 
@@ -997,7 +945,7 @@ $(document).ready(function () {
     }
 
     btnNotBez.onclick = function () {
-      trBez.setAttribute('style', 'display: none;');
+      trBez.classList.remove('inline');
       tdSpanBez.textContent = '1';
     }
 
@@ -1013,7 +961,7 @@ $(document).ready(function () {
     }
 
     btnNotStress.onclick = function () {
-      trStress.setAttribute('style', 'display: none;');
+      trStress.classList.remove('inline');
       tdSpanStress.textContent = '1';
     }
 
@@ -1029,7 +977,7 @@ $(document).ready(function () {
     }
 
     btnNotMark.onclick = function () {
-      trMark.setAttribute('style', 'display: none;');
+      trMark.classList.remove('inline');
       tdSpanMark.textContent = '1';
     }
 
@@ -1045,7 +993,7 @@ $(document).ready(function () {
     }
 
     btnNotAD.onclick = function () {
-      trAD.setAttribute('style', 'display: none;');
+      trAD.classList.remove('inline');
       tdSpanAD.textContent = '1';
     }
     btnPlusAB.onclick = function () {
@@ -1060,130 +1008,82 @@ $(document).ready(function () {
     }
 
     btnNotAB.onclick = function () {
-      trAB.setAttribute('style', 'display: none;');
+      trAB.classList.remove('inline');
       tdSpanAB.textContent = '1';
     }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     btnAdd2Front.onclick = function () {
-      trFront.setAttribute('style', 'display: inline;');
-      btnAddFront.setAttribute('style', 'visibility:hiden;');
+      trFront.classList.add('inline');
     }
 
     btnAdd2Api.onclick = function () {
-      trApi.setAttribute('style', 'display: inline;');
-      btnAddApi.setAttribute('style', 'display: none;');
+      trApi.classList.add('inline');
     }
     btnAdd2Back.onclick = function () {
-      trBack.setAttribute('style', 'display: inline;');
-      btnAddBack.setAttribute('style', 'display: none;');
+      trBack.classList.add('inline');
     }
     btnAdd2Mob.onclick = function () {
-      trMob.setAttribute('style', 'display: inline;');
-      btnAddMob.setAttribute('style', 'display: none;');
+      trMob.classList.add('inline');
     }
     btnAdd2Bez.onclick = function () {
-      trBez.setAttribute('style', 'display: inline;');
-      btnAddBez.setAttribute('style', 'display: none;');
+      trBez.classList.add('inline');
     }
     btnAdd2Stress.onclick = function () {
-      trStress.setAttribute('style', 'display: inline;');
-      btnAddStress.setAttribute('style', 'display: none;');
+      trStress.classList.add('inline');
     }
     btnAdd2Mark.onclick = function () {
-      trMark.setAttribute('style', 'display: inline;');
-      btnAddMark.setAttribute('style', 'display: none;');
+      trMark.classList.add('inline');
     }
     btnAdd2AB.onclick = function () {
-      trAB.setAttribute('style', 'display: inline;');
-      btnAddAB.setAttribute('style', 'display: none;');
+      trAB.classList.add('inline');
     }
     btnAdd2AD.onclick = function () {
-      trAD.setAttribute('style', 'display: inline;');
-      btnAddAD.setAttribute('style', 'display: none;');
+      trAD.classList.add('inline');
     }
-
-
-
-    // btnAdd2Front.onclick = btnAddFront();
-    // btnAdd2Api.onclick = btnAddApi();
-    // btnAdd2Back.onclick = btnAddBack();
-    // btnAdd2Bez.onclick = btnAddBez();
-    // btnAdd2Mob.onclick = btnAddMob();
-    // btnAdd2Stress.onclick = btnAddStress();
 
 
     btnAddFront.onclick = function () {
-      trFront.setAttribute('style', 'display: inline;');
-      btnAddFront.setAttribute('style', 'visibility:hiden;');
+      trFront.classList.add('inline');
     }
 
     btnAddApi.onclick = function () {
-      trApi.setAttribute('style', 'display: inline;');
-      btnAddApi.setAttribute('style', 'display: none;');
+      trApi.classList.add('inline');
     }
     btnAddBack.onclick = function () {
-      trBack.setAttribute('style', 'display: inline;');
-      btnAddBack.setAttribute('style', 'display: none;');
+      trBack.classList.add('inline');
     }
     btnAddMob.onclick = function () {
-      trMob.setAttribute('style', 'display: inline;');
-      btnAddMob.setAttribute('style', 'display: none;');
+      trMob.classList.add('inline');
     }
     btnAddBez.onclick = function () {
-      trBez.setAttribute('style', 'display: inline;');
-      btnAddBez.setAttribute('style', 'display: none;');
+      trBez.classList.add('inline');
     }
     btnAddStress.onclick = function () {
-      trStress.setAttribute('style', 'display: inline;');
-      btnAddStress.setAttribute('style', 'display: none;');
+      trStress.classList.add('inline');
     }
     btnAddMark.onclick = function () {
-      trMark.setAttribute('style', 'display: inline;');
-      btnAddMark.setAttribute('style', 'display: none;');
+      trMark.classList.add('inline');
     }
     btnAddAB.onclick = function () {
-      trAB.setAttribute('style', 'display: inline;');
-      btnAddAB.setAttribute('style', 'display: none;');
+      trAB.classList.add('inline');
     }
     btnAddAD.onclick = function () {
-      trAD.setAttribute('style', 'display: inline;');
-      btnAddAD.setAttribute('style', 'display: none;');
+      trAD.classList.add('inline');
     }
 
     btnAddAll.onclick = function () {
-      trStress.setAttribute('style', 'display: inline;');
-      trBez.setAttribute('style', 'display: inline;');
-      trMob.setAttribute('style', 'display: inline;');
-      trBack.setAttribute('style', 'display: inline;');
-      trApi.setAttribute('style', 'display: inline;');
-      trFront.setAttribute('style', 'display: inline;');
-      trAB.setAttribute('style', 'display: inline;');
-      trAD.setAttribute('style', 'display: inline;');
-      trMark.setAttribute('style', 'display: inline;');
+      trStress.classList.add('inline');
+      trBez.classList.add('inline');
+      trMob.classList.add('inline');
+      trBack.classList.add('inline');
+      trApi.classList.add('inline');
+      trFront.classList.add('inline');
+      trAB.classList.add('inline');
+      trAD.classList.add('inline');
+      trMark.classList.add('inline');
     }
-
-
-
-
 
     btnTxtPlusFront.onclick = function () {
       spanTxtFront.setAttribute('style', 'display: inline;');
@@ -1253,14 +1153,7 @@ $(document).ready(function () {
     }
 
 
-
-
-
   </script>
 
-
-
-
 </body>
-
 </html>
