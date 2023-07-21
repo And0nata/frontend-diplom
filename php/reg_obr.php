@@ -11,7 +11,8 @@ if ($mysqli == false) {
   $tel = trim(mb_strtolower($_POST["tel"]));
   $name = trim(mb_strtolower($_POST["name"]));
   $hidden = trim(mb_strtolower($_POST["hidden"]));
-  $textArea = trim(mb_strtolower($_POST["textArea"]));
+  $textArea = trim(mb_strtolower($_POST["textarea"]));
 
-  $mysqli->query("INSERT INTO `diplom`(`email`, `tel`, `name`, `text`, `zakaz`) VALUES ('$email', '$tel', '$name', '$textArea', '$hidden');");
+  $mysqli->query("INSERT INTO `diplom`(`email`, `tel`, `name`, `text`, `zakaz`) VALUES ('$email', '$tel', '$name', '$textArea', '$hidden')");
+  echo("success");
 }
