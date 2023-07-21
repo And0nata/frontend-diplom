@@ -841,23 +841,22 @@ $(document).ready(function () {
         }
       }
       hidden.setAttribute('value', arr);
-      let textAreaText = textArea.textContent;
-      textArea.textContent = textAreaText + arr;
       let msgEmail = document.getElementById('email').value;
       let msgTel = document.getElementById('tel').value;
       let checkbx = document.getElementById('checkbox');
+      let boolcheck =checkbx.hasAttribute('checked');
       if (msgEmail == '' && msgTel == '') {
         smallEmail.setAttribute('style', 'display: inline;'); } 
-      else if (!checkbox.hasAttribute('checked')) { smallCheck.setAttribute('style', 'display: block;'); }
+      else if (!boolcheck) { smallCheck.setAttribute('style', 'display: block;'); }
       else {
         let arrStr = arr.toString();
         hidden.setAttribute('value',arrStr);
-        console.log(hidden);
+        console.log(arr);
+        
        // let textAreaText = textArea.textContent;
        // textArea.textContent = textAreaText + arr;
       }
     }
-
 
     // let btnTxtPlusStress = document.getElementById('btnTxtPlusStress');
     // let btnTxtMinusStress = document.getElementById('btnTxtMinusStress');
@@ -1084,40 +1083,40 @@ $(document).ready(function () {
 
 
 
-    btnAdd2Front.onclick = function btnAddFront() {
+    btnAdd2Front.onclick = function () {
       trFront.setAttribute('style', 'display: inline;');
       btnAddFront.setAttribute('style', 'visibility:hiden;');
     }
 
-    btnAdd2Api.onclick = function btnAddApi() {
+    btnAdd2Api.onclick = function () {
       trApi.setAttribute('style', 'display: inline;');
       btnAddApi.setAttribute('style', 'display: none;');
     }
-    btnAdd2Back.onclick = function btnAddBack() {
+    btnAdd2Back.onclick = function () {
       trBack.setAttribute('style', 'display: inline;');
       btnAddBack.setAttribute('style', 'display: none;');
     }
-    btnAdd2Mob.onclick = function btnAddMob() {
+    btnAdd2Mob.onclick = function () {
       trMob.setAttribute('style', 'display: inline;');
       btnAddMob.setAttribute('style', 'display: none;');
     }
-    btnAdd2Bez.onclick = function btnAddBez() {
+    btnAdd2Bez.onclick = function () {
       trBez.setAttribute('style', 'display: inline;');
       btnAddBez.setAttribute('style', 'display: none;');
     }
-    btnAdd2Stress.onclick = function btnAddStress() {
+    btnAdd2Stress.onclick = function () {
       trStress.setAttribute('style', 'display: inline;');
       btnAddStress.setAttribute('style', 'display: none;');
     }
-    btnAdd2Mark.onclick = function btnAddMark() {
+    btnAdd2Mark.onclick = function () {
       trMark.setAttribute('style', 'display: inline;');
       btnAddMark.setAttribute('style', 'display: none;');
     }
-    btnAdd2AB.onclick = function btnAddAB() {
+    btnAdd2AB.onclick = function () {
       trAB.setAttribute('style', 'display: inline;');
       btnAddAB.setAttribute('style', 'display: none;');
     }
-    btnAdd2AD.onclick = function btnAdAD() {
+    btnAdd2AD.onclick = function () {
       trAD.setAttribute('style', 'display: inline;');
       btnAddAD.setAttribute('style', 'display: none;');
     }
@@ -1132,45 +1131,45 @@ $(document).ready(function () {
     // btnAdd2Stress.onclick = btnAddStress();
 
 
-    btnAddFront.onclick = function btnAddFront() {
+    btnAddFront.onclick = function () {
       trFront.setAttribute('style', 'display: inline;');
       btnAddFront.setAttribute('style', 'visibility:hiden;');
     }
 
-    btnAddApi.onclick = function btnAddApi() {
+    btnAddApi.onclick = function () {
       trApi.setAttribute('style', 'display: inline;');
       btnAddApi.setAttribute('style', 'display: none;');
     }
-    btnAddBack.onclick = function btnAddBack() {
+    btnAddBack.onclick = function () {
       trBack.setAttribute('style', 'display: inline;');
       btnAddBack.setAttribute('style', 'display: none;');
     }
-    btnAddMob.onclick = function btnAddMob() {
+    btnAddMob.onclick = function () {
       trMob.setAttribute('style', 'display: inline;');
       btnAddMob.setAttribute('style', 'display: none;');
     }
-    btnAddBez.onclick = function btnAddBez() {
+    btnAddBez.onclick = function () {
       trBez.setAttribute('style', 'display: inline;');
       btnAddBez.setAttribute('style', 'display: none;');
     }
-    btnAddStress.onclick = function btnAddStress() {
+    btnAddStress.onclick = function () {
       trStress.setAttribute('style', 'display: inline;');
       btnAddStress.setAttribute('style', 'display: none;');
     }
-    btnAddMark.onclick = function btnAddMark() {
+    btnAddMark.onclick = function () {
       trMark.setAttribute('style', 'display: inline;');
       btnAddMark.setAttribute('style', 'display: none;');
     }
-    btnAddAB.onclick = function btnAddAB() {
+    btnAddAB.onclick = function () {
       trAB.setAttribute('style', 'display: inline;');
       btnAddAB.setAttribute('style', 'display: none;');
     }
-    btnAddAD.onclick = function btnAdAD() {
+    btnAddAD.onclick = function () {
       trAD.setAttribute('style', 'display: inline;');
       btnAddAD.setAttribute('style', 'display: none;');
     }
 
-    btnAddAll.onclick = function btnAddStress() {
+    btnAddAll.onclick = function () {
       trStress.setAttribute('style', 'display: inline;');
       trBez.setAttribute('style', 'display: inline;');
       trMob.setAttribute('style', 'display: inline;');
