@@ -14,5 +14,5 @@ if ($mysqli == false) {
   $textArea = trim(mb_strtolower($_POST["textarea"]));
 
   $mysqli->query("INSERT INTO `diplom3`(`email`, `tel`, `name`, `text`, `zakaz`) VALUES ('$email', '$tel', '$name', '$textArea', '$hidden')");
-  echo("success");
+  echo ("success");
 }

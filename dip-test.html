@@ -813,7 +813,6 @@ $(document).ready(function () {
       e.preventDefault();
       var form = $(this);
       var actionUrl = form.attr('action');
-
       $.ajax({
         type: "POST",
         url: actionUrl,
@@ -832,7 +831,6 @@ $(document).ready(function () {
       let tdSpans = document.getElementsByClassName('tdSpan');
       let trs = document.getElementsByTagName('tr');
       let arr = [];
-
      
       for (let i = 1; i < trs.length; i++) {
         let tdSpn = tdSpans[i-1];
@@ -848,13 +846,11 @@ $(document).ready(function () {
 
       let msgEmail = document.getElementById('email').value;
       let msgTel = document.getElementById('tel').value;
-      let checkbx = document.getElementById('checkbox');
-      let boolCheck = checkbx.hasAttribute('checked');
+      let checkbox = checkbx.hasAttribute('checked');
       if (!boolCheck) { smallCheck.setAttribute('style', 'display: block;'); }
       if (msgEmail == '' && msgTel == '') {smallEmail.setAttribute('style', 'display: inline;'); } 
         let arrStr = arr.join(', ');
         hidden.setAttribute('value',arrStr);
-      
     };
     
 
