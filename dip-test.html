@@ -13,9 +13,18 @@
       position: relative;
     }
 
+    thead>tr {
+      display: inline;
+    }
+
     tr {
       display: none;
     }
+
+    svg {
+      margin-right: 10px;;
+    }
+
 
     .inline {
       display: inline;
@@ -29,23 +38,24 @@
 
     }
 
+    a:active, a:hover, a {
+      color: #000 !important;
+  text-decoration: none
+    }
 
 
 
 
 
 
-
-
+    .animate-color {
+      animation: color 4s infinite;
+    }
     .animate-grow {
-      animation: example 4s infinite;
+      animation: grow 4s infinite;
     }
 
-    .animate-grow:hover {
-      animation: none;
-    }
-
-    @keyframes example {
+    @keyframes color {
       from {
         background-color: rgb(233, 148, 37);
       }
@@ -53,7 +63,8 @@
       to {
         background-color: orangered;
       }
-
+    }
+    @keyframes grow {
       0% {
         transform: scale3d(1, 1, 1);
       }
@@ -75,6 +86,7 @@
       opacity: 1;
       transition: all 4s;
     }
+
   </style>
 </head>
 
@@ -147,18 +159,22 @@
   </nav>
 
 
-
+<div class="container">
+  <br>
+  <br>
+  <h2 class="text-center mt-5">Компания тестировщиков </h2>
+  <h1 class="text-center mb-5 animate-grow">"Тестеры"</h1>
+</div>
 
   <!-- карточки -->
   <div class="container">
-    <h2 class="text-center my-5">Компания тестировщиков <br>"Тестеры"</h2>
     <h3 class="nav justify-content-center">Тестируем всё!</h3><br>
     <div class="row row-cols-1 row-cols-md-3">
       <div class="col mb-4">
         <a href="#front">
           <div class="card ">
-            <div class=" ">
-              <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="currentColor"
+            <div class="card-img-top text-center mt-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor"
                 class="bi bi-window-stack" viewBox="0 0 16 16">
                 <path
                   d="M4.5 6a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1ZM6 6a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1Zm2-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Z" />
@@ -167,7 +183,7 @@
               </svg>
             </div>
             <div class="card-body">
-              <h5 class="card-title">Тестирование Frontend</h5>
+              <h4 class="card-title">Тестирование Frontend</h4>
               <p class="card-text">Профессиональное тестирование вашего веб-интерфейса – убедитесь, что ваш сайт
                 работает
                 безупречно на любом устройстве и во всех популярных браузерах.</p>
@@ -177,16 +193,16 @@
       </div>
       <div class="col mb-4">
         <a href="#api">
-          <div class="card h-100">
-            <div class=" ">
-              <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="currentColor"
+          <div class="card h-100 ">
+            <div class="card-img-top text-center  mt-3 ">
+              <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor"
                 class="bi bi-arrow-left-right" viewBox="0 0 16 16">
                 <path fill-rule="evenodd"
                   d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z" />
               </svg>
             </div>
             <div class="card-body">
-              <h5 class="card-title">Тестирование API</h5>
+              <h4 class="card-title text-center">Тестирование API</h4>
               <p class="card-text">Полное тестирование вашего API – убедитесь, что оно обеспечивает надежное
                 взаимодействие вашего приложения с другими системами и сервисами.</p>
             </div>
@@ -195,9 +211,9 @@
       </div>
       <div class="col mb-4">
         <a href="#back">
-          <div class="card h-100">
-            <div class=" ">
-              <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="currentColor"
+          <div class="card h-100 ">
+            <div class="card-img-top text-center  mt-3 ">
+              <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor"
                 class="bi bi-database-fill-up" viewBox="0 0 16 16">
                 <path
                   d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.354-5.854 1.5 1.5a.5.5 0 0 1-.708.708L13 11.707V14.5a.5.5 0 0 1-1 0v-2.793l-.646.647a.5.5 0 0 1-.708-.708l1.5-1.5a.5.5 0 0 1 .708 0ZM8 1c-1.573 0-3.022.289-4.096.777C2.875 2.245 2 2.993 2 4s.875 1.755 1.904 2.223C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777C13.125 5.755 14 5.007 14 4s-.875-1.755-1.904-2.223C11.022 1.289 9.573 1 8 1Z" />
@@ -206,7 +222,7 @@
               </svg>
             </div>
             <div class="card-body">
-              <h5 class="card-title">Тестирование Backend</h5>
+              <h4 class="card-title text-center">Тестирование Backend</h4>
               <p class="card-text">Профессиональная проверка вашего серверного кода – убедитесь, что ваша система
                 обрабатывает данные правильно, имеет высокую безотказность и масштабируемость.</p>
             </div>
@@ -215,16 +231,16 @@
       </div>
       <div class="col mb-4">
         <a href="#mob">
-          <div class="card h-100">
-            <div class=" ">
-              <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="currentColor"
+          <div class="card h-100 ">
+            <div class="card-img-top text-center  mt-3 ">
+              <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor"
                 class="bi bi-android2" viewBox="0 0 16 16">
                 <path
                   d="m10.213 1.471.691-1.26c.046-.083.03-.147-.048-.192-.085-.038-.15-.019-.195.058l-.7 1.27A4.832 4.832 0 0 0 8.005.941c-.688 0-1.34.135-1.956.404l-.7-1.27C5.303 0 5.239-.018 5.154.02c-.078.046-.094.11-.049.193l.691 1.259a4.25 4.25 0 0 0-1.673 1.476A3.697 3.697 0 0 0 3.5 5.02h9c0-.75-.208-1.44-.623-2.072a4.266 4.266 0 0 0-1.664-1.476ZM6.22 3.303a.367.367 0 0 1-.267.11.35.35 0 0 1-.263-.11.366.366 0 0 1-.107-.264.37.37 0 0 1 .107-.265.351.351 0 0 1 .263-.11c.103 0 .193.037.267.11a.36.36 0 0 1 .112.265.36.36 0 0 1-.112.264Zm4.101 0a.351.351 0 0 1-.262.11.366.366 0 0 1-.268-.11.358.358 0 0 1-.112-.264c0-.103.037-.191.112-.265a.367.367 0 0 1 .268-.11c.104 0 .19.037.262.11a.367.367 0 0 1 .107.265c0 .102-.035.19-.107.264ZM3.5 11.77c0 .294.104.544.311.75.208.204.46.307.76.307h.758l.01 2.182c0 .276.097.51.292.703a.961.961 0 0 0 .7.288.973.973 0 0 0 .71-.288.95.95 0 0 0 .292-.703v-2.182h1.343v2.182c0 .276.097.51.292.703a.972.972 0 0 0 .71.288.973.973 0 0 0 .71-.288.95.95 0 0 0 .292-.703v-2.182h.76c.291 0 .54-.103.749-.308.207-.205.311-.455.311-.75V5.365h-9v6.404Zm10.495-6.587a.983.983 0 0 0-.702.278.91.91 0 0 0-.293.685v4.063c0 .271.098.501.293.69a.97.97 0 0 0 .702.284c.28 0 .517-.095.712-.284a.924.924 0 0 0 .293-.69V6.146a.91.91 0 0 0-.293-.685.995.995 0 0 0-.712-.278Zm-12.702.283a.985.985 0 0 1 .712-.283c.273 0 .507.094.702.283a.913.913 0 0 1 .293.68v4.063a.932.932 0 0 1-.288.69.97.97 0 0 1-.707.284.986.986 0 0 1-.712-.284.924.924 0 0 1-.293-.69V6.146c0-.264.098-.491.293-.68Z" />
               </svg>
             </div>
             <div class="card-body">
-              <h5 class="card-title">Тестирование мобильных приложений</h5>
+              <h4 class="card-title text-center">Тестирование мобильных приложений</h4>
               <p class="card-text">Гарантированное качество вашего мобильного приложения – мы проверим его
                 функциональность, совместимость, производительность и удобство использования на различных устройствах и
                 операционных системах.</p>
@@ -234,16 +250,16 @@
       </div>
       <div class="col mb-4">
         <a href="#bez">
-          <div class="card h-100">
-            <div class=" ">
-              <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="currentColor"
+          <div class="card h-100 ">
+            <div class="card-img-top text-center  mt-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor"
                 class="bi bi-unlock-fill" viewBox="0 0 16 16">
                 <path
                   d="M11 1a2 2 0 0 0-2 2v4a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h5V3a3 3 0 0 1 6 0v4a.5.5 0 0 1-1 0V3a2 2 0 0 0-2-2z" />
               </svg>
             </div>
             <div class="card-body">
-              <h5 class="card-title">Тестирование безопасность</h5>
+              <h4 class="card-title text-center">Тестирование безопасность</h4>
               <p class="card-text">Защитите ваше приложение от угроз – мы проведем всестороннюю проверку на уязвимости и
                 поможем вам устранить проблемы безопасности, чтобы ваши данные и система были в безопасности.</p>
             </div>
@@ -252,9 +268,9 @@
       </div>
       <div class="col mb-4">
         <a href="#stress">
-          <div class="card h-100">
-            <div class=" ">
-              <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="currentColor"
+          <div class="card h-100 ">
+            <div class="card-img-top text-center  mt-3 ">
+              <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor"
                 class="bi bi-speedometer" viewBox="0 0 16 16">
                 <path
                   d="M8 2a.5.5 0 0 1 .5.5V4a.5.5 0 0 1-1 0V2.5A.5.5 0 0 1 8 2zM3.732 3.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 8a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 7.31A.91.91 0 1 0 8.85 8.569l3.434-4.297a.389.389 0 0 0-.029-.518z" />
@@ -263,7 +279,7 @@
               </svg>
             </div>
             <div class="card-body">
-              <h5 class="card-title">Нагрузочное тестирование</h5>
+              <h4 class="card-title text-center">Нагрузочное тестирование</h4>
               <p class="card-text">Откройте для своего приложения все границы – мы проведем тесты на высокой нагрузке,
                 чтобы убедиться в его стабильности, масштабируемости и производительности в условиях реального
                 использования.</p>
@@ -273,12 +289,12 @@
       </div>
     </div>
   </div>
-
+<hr>
 
 
 
   <!-- раздел о багах -->
-  <div class="container" id="what">
+  <div class="container mt-5" id="what">
     <h3 class="nav justify-content-center">Что происходит и кто такие баги</h3><br>
     <ul class="list-unstyled">
       <li class="media my-1">
@@ -292,7 +308,7 @@
           </svg>
         </div>
         <div class="media-body">
-          <h5 class="mt-0 mb-1">Что такое баги</h5>
+          <h4 class="mt-0 mb-1">Что такое баги</h4>
           <p>Баги – это неполадки или ошибки, которые возникают в программном обеспечении или
             веб-сайтах. Они могут привести к неправильной работе функций или даже к полной остановке системы.</p>
         </div>
@@ -302,7 +318,7 @@
           <img src="./img/Bag.jpg" class="bageits element-animation" style="width:100px;" alt="баГейтс">
         </div>
         <div class="media-body">
-          <h5 class="mt-0 ">Баги повсюду</h5>
+          <h4 class="mt-0 ">Баги повсюду</h4>
           <p>Все программы содержат баги, и некоторые из них могут быть очень серьезными.
             Независимо от того, насколько тщательно разработчики тестируют свое ПО, всегда останутся мелкие дефекты
             и проблемы, которые могут вызвать неудобства для пользователей.</p>
@@ -317,7 +333,7 @@
           </svg>
         </div>
         <div class="media-body">
-          <h5 class="">Баги наносят ущерб</h5>
+          <h4 class="">Баги наносят ущерб</h4>
           <p>Баги могут причинить значительный ущерб как пользователям, так и разработчикам. Для
             пользователей они могут стать причиной потери данных, невозможности выполнения определенных действий или
             даже угрозой безопасности данных. Для разработчиков, баги могут повлиять на репутацию компании, привести
@@ -326,15 +342,14 @@
       </li>
     </ul>
   </div>
+<hr>
 
   <!-- раздел о мотивации тестировать -->
-  <div class="container" id="about">
-    <div>
-
-    </div>
+  <div class="container mt-5" id="about">
+<h3 class="text-center" >Зачем тестировать?</h3>
     <div class="card-deck">
       <div class="card">
-        <div>
+        <div class="text-center  mt-3">
           <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-bank"
             viewBox="0 0 16 16">
             <path
@@ -347,14 +362,14 @@
           </svg>
         </div>
         <div class="card-body">
-          <h5 class="card-title">Избегание ущерба</h5>
+          <h4 class="card-title text-center">Избегание ущерба</h4>
           <p class="card-text">Регулярное тестирование программного обеспечения помогает выявить и устранить баги до
             того, как они нанесут ущерб пользователям. Благодаря тестированию можно обнаружить и исправить ошибки на
             ранних стадиях разработки, что позволяет сохранить высокий уровень качества и надежности продукта.</p>
         </div>
       </div>
       <div class="card">
-        <div>
+        <div class="text-center  mt-3">
           <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor"
             class="bi bi-bag-check-fill" viewBox="0 0 16 16">
             <path fill-rule="evenodd"
@@ -367,14 +382,14 @@
           </svg>
         </div>
         <div class="card-body">
-          <h5 class="card-title">Всё работает</h5>
+          <h4 class="card-title text-center">Всё работает</h4>
           <p class="card-text">Хорошо спланированное и проведенное тестирование программного обеспечения гарантирует его
             работоспособность. Тестирование включает в себя проверку функциональности, производительности, безопасности
             и других аспектов ПО, чтобы убедиться, что оно соответствует требованиям и ожиданиям пользователей.</p>
         </div>
       </div>
       <div class="card">
-        <div>
+        <div class="text-center  mt-3">
           <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor"
             class="bi bi-basket2-fill" viewBox="0 0 16 16">
             <path
@@ -387,7 +402,7 @@
           </svg>
         </div>
         <div class="card-body">
-          <h5 class="card-title">Все хотят качество</h5>
+          <h4 class="card-title text-center">Все хотят качество</h4>
           <p class="card-text">Качество продукта имеет решающее значение как для потребителей, так и для производителей.
             Пользователи ожидают надежности, безопасности и эффективности программного обеспечения, а производители
             стремятся к высокому уровню доверия и удовлетворенности клиентов. Тестирование помогает обеспечить высокое
@@ -396,14 +411,15 @@
       </div>
     </div>
   </div>
+  <hr>
 
   <!-- раздел о тестировщиках -->
-  <div class="container" id="why">
+  <div class="container mt-5" id="why">
     <h3 class="nav justify-content-center">Кто тестировать будет?</h3><br>
     <div class="row row-cols-1 row-cols-md-2">
       <div class="col mb-4">
         <div class="card">
-          <div>
+          <div class="text-center  mt-3">
             <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-book-half"
               viewBox="0 0 16 16">
               <path
@@ -422,7 +438,7 @@
             </svg>
           </div>
           <div class="card-body">
-            <h5 class="card-title">Знающие и умеющие</h5>
+            <h4 class="card-title">Знающие и умеющие</h4>
             <p class="card-text">Хочешь работать с настоящими профессионалами в мире тестирования? Присоединяйся к нашей
               группе тестировщиков "Знающие и умеющие"! Здесь мы собрали самых опытных и компетентных специалистов.
               Обменивайся знаниями, учись новым техникам тестирования и развивайся вместе с нами. Вместе мы создадим
@@ -431,8 +447,8 @@
         </div>
       </div>
       <div class="col mb-4">
-        <div class="card">
-          <div>
+        <div class="card h-100">
+          <div class="text-center  mt-3">
             <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor"
               class="bi bi-people-fill" viewBox="0 0 16 16">
               <path
@@ -451,7 +467,7 @@
             </svg>
           </div>
           <div class="card-body">
-            <h5 class="card-title">Нас миньоны </h5>
+            <h4 class="card-title">Нас миньоны </h4>
             <p class="card-text">Нас много как миньонов, и мы готовы не унывая браться за любой объем работы. Выберите
               желаемое количество тестировщиков для работы. Тестировщики у нас объединенны общими интересами к
               тестированию и желанием сделать мир ПО лучше.</p>
@@ -459,8 +475,8 @@
         </div>
       </div>
       <div class="col mb-4">
-        <div class="card">
-          <div>
+        <div class="card h-100">
+          <div class="text-center  mt-3">
             <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor"
               class="bi bi-aspect-ratio-fill" viewBox="0 0 16 16">
               <path
@@ -480,7 +496,7 @@
             </svg>
           </div>
           <div class="card-body">
-            <h5 class="card-title">С дипломами и сертификатами</h5>
+            <h4 class="card-title">С дипломами и сертификатами</h4>
             <p class="card-text">Мы истинные профессионалы, которые гордятся своими достижениями. Выбирите для
               тестирования экспертов в своем деле. У нас ты найдешь команду единомышленников и талантливых
               профессионалов!</p>
@@ -489,7 +505,7 @@
       </div>
       <div class="col mb-4">
         <div class="card">
-          <div>
+          <div class="text-center  mt-3">
             <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor"
               class="bi bi-bag-heart-fill" viewBox="0 0 16 16">
               <path
@@ -507,7 +523,7 @@
             </svg>
           </div>
           <div class="card-body">
-            <h5 class="card-title">Хотящие работать и сделать лучше</h5>
+            <h4 class="card-title">Хотящие работать и сделать лучше</h4>
             <p class="card-text">Чувствуем, что можешь сделать лучше, стремимся к постоянному развитию и не боимся брать
               на себя ответственность за качество продукта. Здесь ты найдешь команду энергичных и мотивированных
               профессионалов. Мы сделаем каждое тестирование с настоящим мастерством!</p>
@@ -516,14 +532,15 @@
       </div>
     </div>
   </div>
+  <hr>
 
   <!-- раздел о видах тестирования -->
-  <div class="container" id="test">
+  <div class="container mt-5" id="test">
     <h2 class="nav justify-content-center">Что тестируем?</h2><br>
     <div class="row row-cols-1 row-cols-md-1">
-      <div class="card " id="front">
+      <div class="card p-2" id="front">
         <div class="row no-gutters">
-          <div class="col-md-4">
+          <div class="col-md-2 mt-4 ml-4 ">
             <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="currentColor"
               class="bi bi-layout-text-window-reverse" viewBox="0 0 16 16">
               <path
@@ -531,11 +548,12 @@
               <path
                 d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12zM2 1a1 1 0 0 0-1 1v1h14V2a1 1 0 0 0-1-1H2zM1 4v10a1 1 0 0 0 1 1h2V4H1zm4 0v11h9a1 1 0 0 0 1-1V4H5z" />
             </svg>
-            <button type="button" class="btn btn-secondary" id="btnAdd2Front">Хочу</button>
+            <br>
+            <button type="button" class="btn btn-secondary my-3" id="btnAdd2Front">Хочу</button>
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">Тестирование Frontend</h5>
+              <h4 class="card-title">Тестирование Frontend</h4>
               <p class="card-text">Тестирование Frontend - это процесс проверки корректности работы пользовательского
                 интерфейса веб-приложения, а также функциональности, доступной для пользователя. Во время тестирования
                 Frontend обычно проверяются такие аспекты, как верстка, отображение элементов, интерактивность и
@@ -556,16 +574,16 @@
           </div>
         </div>
       </div>
-      <div class="card mb" id="back">
+      <div class="card p-2 " id="back">
         <div class="row no-gutters">
-          <div class="col-md-8">
+          <div class="col-md-9">
             <div class="card-body">
-              <h5 class="card-title">Тестирование Backend</h5>
+              <h4 class="card-title">Тестирование Backend</h4>
               <p class="card-text">Тестирование Backend - это процесс проверки корректности работы серверной части
                 приложения, которая обрабатывает данные, осуществляет бизнес-логику и взаимодействует с базами данных и
                 другими системами. Во время тестирования Backend проверяются такие аспекты, как работоспособность API,
                 правильность обработки данных, безопасность, производительность и масштабируемость. Для тестирования
-                Backend используются такие инструменты, как JUnit, TestNG, PHPUnit и другие.<button type="button"
+                Backend используются такие инструменты, как JUnit, TestNG, PHPUnit и другие. <button type="button"
                   class="btn btn-outline-secondary txt-plus" id="btnTxtPlusBack">Подробнее</button>
                 <span id="spanTxtBack" style="display: none;;">Тестирование Backend включает в себя проверку
                   правильности работы серверной части приложения, такой как база данных, серверы приложений, API и
@@ -577,34 +595,36 @@
               </p>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-2 mt-4 ml-4">
             <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="currentColor"
               class="bi bi-terminal-fill" viewBox="0 0 16 16">
               <path
                 d="M0 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3zm9.5 5.5h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zm-6.354-.354a.5.5 0 1 0 .708.708l2-2a.5.5 0 0 0 0-.708l-2-2a.5.5 0 1 0-.708.708L4.793 6.5 3.146 8.146z" />
             </svg>
-            <button type="button" class="btn btn-secondary" id="btnAdd2Back">Хочу</button>
+            <br>
+            <button type="button" class="btn btn-secondary my-3" id="btnAdd2Back">Хочу</button>
           </div>
         </div>
       </div>
-      <div class="card mb" id="api">
+      <div class="card  p-2" id="api">
         <div class="row no-gutters">
-          <div class="col-md-4">
+          <div class="col-md-2 mt-4 ml-4 ">
             <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="currentColor"
               class="bi bi-bar-chart-steps" viewBox="0 0 16 16">
               <path
                 d="M.5 0a.5.5 0 0 1 .5.5v15a.5.5 0 0 1-1 0V.5A.5.5 0 0 1 .5 0zM2 1.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5v-1zm2 4a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-1zm2 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-6a.5.5 0 0 1-.5-.5v-1zm2 4a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-1z" />
             </svg>
-            <button type="button" class="btn btn-secondary" id="btnAdd2Api">Хочу</button>
+            <br>
+            <button type="button" class="btn btn-secondary my-3" id="btnAdd2Api">Хочу</button>
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">Тестирование API</h5>
+              <h4 class="card-title">Тестирование API</h4>
               <p class="card-text">Тестирование API - это процесс проверки правильности работы программного интерфейса
                 приложения, который позволяет взаимодействовать с другими приложениями или сетями. Во время тестирования
                 API проверяется достоверность и соответствие стандартам запросов и ответов, а также функциональность и
                 безопасность API. Для тестирования API используются такие инструменты, как Postman, SoapUI, RestAssured
-                и другие.<button type="button" class="btn btn-outline-secondary txt-plus"
+                и другие. <button type="button" class="btn btn-outline-secondary txt-plus"
                   id="btnTxtPlusApi">Подробнее</button>
                 <span id="spanTxtApi" style="display: none;;">Тестирование API (Application Programming Interface)
                   осуществляется для проверки корректности работы интерфейса программного обеспечения, который позволяет
@@ -617,16 +637,16 @@
           </div>
         </div>
       </div>
-      <div class="card mb" id="bez">
+      <div class="card  p-2" id="bez">
         <div class="row no-gutters">
-          <div class="col-md-8">
+          <div class="col-md-9">
             <div class="card-body">
-              <h5 class="card-title">Тестирование безопасности</h5>
+              <h4 class="card-title">Тестирование безопасности</h4>
               <p class="card-text">Тестирование безопасности - это процесс проверки защищенности приложения от возможных
                 атак и утечек данных. Во время тестирования безопасности выполняются различные виды атак, такие как
                 инъекции SQL, переполнения буфера, кросс-сайтовые скрипты и другие, чтобы проверить, насколько хорошо
                 приложение защищено от таких угроз. Для тестирования безопасности используются такие инструменты, как
-                Burp Suite, OWASP ZAP, Nessus и другие.<button type="button" class="btn btn-outline-secondary txt-plus"
+                Burp Suite, OWASP ZAP, Nessus и другие. <button type="button" class="btn btn-outline-secondary txt-plus"
                   id="btnTxtPlusBez">Подробнее</button>
                 <span id="spanTxtBez" style="display: none;;">Тестирование безопасности выполняется с целью обнаружения
                   уязвимостей и возможных угроз безопасности системы. Оно включает в себя проверку правильности
@@ -638,19 +658,20 @@
                   id="btnTxtMinusBez">Свернуть</button>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-2 mt-4 ml-4">
             <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="currentColor"
               class="bi bi-door-open-fill" viewBox="0 0 16 16">
               <path
                 d="M1.5 15a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H13V2.5A1.5 1.5 0 0 0 11.5 1H11V.5a.5.5 0 0 0-.57-.495l-7 1A.5.5 0 0 0 3 1.5V15H1.5zM11 2h.5a.5.5 0 0 1 .5.5V15h-1V2zm-2.5 8c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1z" />
             </svg>
-            <button type="button" class="btn btn-secondary" id="btnAdd2Bez">Хочу</button>
+            <br>
+            <button type="button" class="btn btn-secondary my-3" id="btnAdd2Bez">Хочу</button>
           </div>
         </div>
       </div>
-      <div class="card mb" id="mob">
+      <div class="card  p-2" id="mob">
         <div class="row no-gutters">
-          <div class="col-md-4">
+          <div class="col-md-2 mt-4 ml-4 ">
             <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="currentColor" class="bi bi-apple"
               viewBox="0 0 16 16">
               <path
@@ -658,16 +679,17 @@
               <path
                 d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z" />
             </svg>
-            <button type="button" class="btn btn-secondary" id="btnAdd2Mob">Хочу</button>
+            <br>
+            <button type="button" class="btn btn-secondary my-3" id="btnAdd2Mob">Хочу</button>
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">Тестирование мобильных приложений</h5>
+              <h4 class="card-title">Тестирование мобильных приложений</h4>
               <p class="card-text">Тестирование мобильных приложений - это процесс проверки корректности работы
                 программного обеспечения на мобильных устройствах, таких как смартфоны и планшеты. Во время тестирования
                 мобильных приложений проверяются такие аспекты, как функциональность, совместимость с различными
                 операционными системами, эффективность, производительность и удобство использования. Для тестирования
-                мобильных приложений используются такие инструменты, как Appium, Espresso, XCUITest и другие.<button
+                мобильных приложений используются такие инструменты, как Appium, Espresso, XCUITest и другие. <button
                   type="button" class="btn btn-outline-secondary txt-plus" id="btnTxtPlusMob">Подробнее</button>
                 <span id="spanTxtMob" style="display: none;;">Тестирование мобильных приложений – это процесс проверки
                   функциональности, стабильности и безопасности приложений, предназначенных для различных мобильных
@@ -681,17 +703,17 @@
           </div>
         </div>
       </div>
-      <div class="card mb" id="stress">
+      <div class="card  p-2" id="stress">
         <div class="row no-gutters">
-          <div class="col-md-8">
+          <div class="col-md-9">
             <div class="card-body">
-              <h5 class="card-title">Нагрузочное тестирование</h5>
+              <h4 class="card-title">Нагрузочное тестирование</h4>
               <p class="card-text">Нагрузочное тестирование - это процесс проверки производительности и стабильности
                 приложения при разной нагрузке. Во время нагрузочного тестирования приложение подвергается высокой
                 нагрузке, чтобы проверить его способность работать с большим количеством одновременных пользователей или
                 запросов. При тестировании также анализируются показатели производительности, такие как время отклика,
                 пропускная способность и использование ресурсов. Для нагрузочного тестирования используются такие
-                инструменты, как JMeter, LoadRunner, Gatling и другие.<button type="button"
+                инструменты, как JMeter, LoadRunner, Gatling и другие. <button type="button"
                   class="btn btn-outline-secondary txt-plus" id="btnTxtPlusStress">Подробнее</button>
                 <span id="spanTxtStress" style="display: none;;">Нагрузочное тестирование является процессом проверки
                   производительности и стабильности системы при высокой нагрузке. Оно используется для определения
@@ -702,7 +724,7 @@
                   id="btnTxtMinusStress">Свернуть</button>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-2 mt-4 ml-4">
             <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="currentColor" class="bi bi-stack"
               viewBox="0 0 16 16">
               <path
@@ -710,7 +732,8 @@
               <path
                 d="m14.12 6.576 1.715.858c.22.11.22.424 0 .534l-7.568 3.784a.598.598 0 0 1-.534 0L.165 7.968a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.659z" />
             </svg>
-            <button type="button" class="btn btn-secondary" id="btnAdd2Stress">Хочу</button>
+            <br>
+            <button type="button" class="btn btn-secondary my-3" id="btnAdd2Stress">Хочу</button>
           </div>
         </div>
       </div>
@@ -718,10 +741,10 @@
   </div>
 
   <!-- раздел о дополнительных видах тестирования -->
-  <div class="container" id="also">
-    <h2 class="nav justify-content-center">Дополнительные тестирования?</h2><br>
+  <div class="container mt-5" id="also">
+    <h3 class="nav justify-content-center">Дополнительные тестирования?</h3><br>
     <div class="card">
-      <h5 class="card-header">Тестирование рынка</h5>
+      <h4 class="card-header">Тестирование рынка</h4>
       <div class="card-body">
         <div class="row">
           <div class="col-md-10">
@@ -733,8 +756,8 @@
               убедитесь в успешном будущем вашего предприятия!"</p>
             <button id="btnAdd2Mark" type="button" class="btn btn-secondary">Хочу</button>
           </div>
-          <div class="col-md-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" fill="currentColor" class="bi bi-reception-4"
+          <div class="col-md-2 ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110" fill="currentColor" class="bi bi-reception-4"
               viewBox="0 0 16 16">
               <path
                 d="M0 11.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2zm4-3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-5zm4-3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-8zm4-3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v11a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-11z" />
@@ -744,7 +767,7 @@
       </div>
     </div>
     <div class="card">
-      <h5 class="card-header">A/В тестирование</h5>
+      <h4 class="card-header">A/В тестирование</h4>
       <div class="card-body">
         <div class="row">
           <div class="col-md-10">
@@ -758,7 +781,7 @@
             <button id="btnAdd2AB" type="button" class="btn btn-secondary">Хочу</button>
           </div>
           <div class="col-md-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" fill="currentColor"
+            <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110" fill="currentColor"
               class="bi bi-megaphone-fill" viewBox="0 0 16 16">
               <path
                 d="M13 2.5a1.5 1.5 0 0 1 3 0v11a1.5 1.5 0 0 1-3 0v-11zm-1 .724c-2.067.95-4.539 1.481-7 1.656v6.237a25.222 25.222 0 0 1 1.088.085c2.053.204 4.038.668 5.912 1.56V3.224zm-8 7.841V4.934c-.68.027-1.399.043-2.008.053A2.02 2.02 0 0 0 0 7v2c0 1.106.896 1.996 1.994 2.009a68.14 68.14 0 0 1 .496.008 64 64 0 0 1 1.51.048zm1.39 1.081c.285.021.569.047.85.078l.253 1.69a1 1 0 0 1-.983 1.187h-.548a1 1 0 0 1-.916-.599l-1.314-2.48a65.81 65.81 0 0 1 1.692.064c.327.017.65.037.966.06z" />
@@ -768,8 +791,7 @@
       </div>
     </div>
     <div class="card">
-
-      <h5 class="card-header">Тестирование идей</h5>
+      <h4 class="card-header">Тестирование идей</h4>
       <div class="card-body">
         <div class="row">
           <div class="col-md-10">
@@ -781,7 +803,7 @@
             <button id="btnAdd2AD" type="button" class="btn btn-secondary">Хочу</button>
           </div>
           <div class="col-md-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" fill="currentColor"
+            <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110" fill="currentColor"
               class="bi bi-signpost-2-fill" viewBox="0 0 16 16">
               <path
                 d="M7.293.707A1 1 0 0 0 7 1.414V2H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h5v1H2.5a1 1 0 0 0-.8.4L.725 8.7a.5.5 0 0 0 0 .6l.975 1.3a1 1 0 0 0 .8.4H7v5h2v-5h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H9V6h4.5a1 1 0 0 0 .8-.4l.975-1.3a.5.5 0 0 0 0-.6L14.3 2.4a1 1 0 0 0-.8-.4H9v-.586A1 1 0 0 0 7.293.707z" />
@@ -791,10 +813,10 @@
       </div>
     </div>
   </div>
+  <hr class="m-5">
 
-  <hr>
   <!-- раздел отзывов и сертификатов-->
-  <div class="container" id="refresh">
+  <div class="container mt-5" id="refresh">
     <div class="row">
       <div class="col">
         <div class="accordion" id="accordionExample">
@@ -912,7 +934,7 @@
       </div>
     </div>
   </div>
-  <hr>
+  <hr class="m-5">
 
   <!-- Смета и форма обратной связи-->
   <div class="container" id="forma">
@@ -1059,10 +1081,10 @@
             <textarea id="textarea" name="textarea" class="form-control" rows="3"
               placeholder="Напишите сообщение"></textarea>
           </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="checkbox" value="" />
-            <label class="form-check-label" for="checkbox">
-              Согласие на <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#persModal">
+          <div class="form-check mb-3">
+            <input class="form-check-input " type="checkbox" style="height:25px; width: 25px;" id="checkbox" value="" />
+            <label class="form-check-label ml-3" for="checkbox">
+              Согласие на <button type="button" class="btn btn-outline-secondary p-1" data-toggle="modal" data-target="#persModal">
                 обработку персональных данных
               </button>
             </label>
@@ -1071,25 +1093,22 @@
               отправки формы</p>
           </div>
           <div class="form-group">
-            <input type="submit" class="btn btn-info btn-lg animate-grow" value="Отправить" id="btnSubmit" />
+            <input type="submit" class="btn btn-info btn-lg  animate-color" value="Отправить" id="btnSubmit" />
           </div>
         </form>
       </div>
     </div>
   </div>
-  <hr>
+  <hr class="m-4">
 
-  <style>
-
-  </style>
 
   <!-- Модальное окно -->
   <div class="modal fade" id="persModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Договор об оказании услуг и передаче персональных данных
-          </h5>
+          <h4 class="modal-title" id="exampleModalLabel">Договор об оказании услуг и передаче персональных данных
+          </h4>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -1137,7 +1156,7 @@
     <h3 class="nav justify-content-center">Ищите нас на планете Земля</h3><br>
     <div class="row">
       <div class="col-md-7">
-        <h3>Карта</h3>
+        <h5>Карта</h3>
         <iframe src="https://www.google.com/maps/d/embed?mid=1B7xHlB6oPVhmRIBMGm3rEc5QMXDMnAQ&ehbc=2E312F" width="440"
           height="280"></iframe>
       </div>
@@ -1148,14 +1167,14 @@
           <path fill-rule="evenodd"
             d="M16 8a8.001 8.001 0 0 1-7.022 7.94l1.902-7.098a2.995 2.995 0 0 0 .05-1.492A2.977 2.977 0 0 0 10.237 6h5.511A8 8 0 0 1 16 8ZM0 8a8 8 0 0 0 7.927 8l1.426-5.321a2.978 2.978 0 0 1-.723.255 2.979 2.979 0 0 1-1.743-.147 2.986 2.986 0 0 1-1.043-.7L.633 4.876A7.975 7.975 0 0 0 0 8Zm5.004-.167L1.108 3.936A8.003 8.003 0 0 1 15.418 5H8.066a2.979 2.979 0 0 0-1.252.243 2.987 2.987 0 0 0-1.81 2.59ZM8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
         </svg>
-        <h5>Сайт:</h5>
+        <h5 class="inline">Сайт:</h5>
         <p><a href="https://practicum.yandex.ru/career-center/">Сайт карьерного центра</a></p>
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-telephone-fill"
           viewBox="0 0 16 16">
           <path fill-rule="evenodd"
             d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
         </svg>
-        <h5>Телефон:</h5>
+        <h5 class="inline">Телефон:</h5>
         <p><a href="tel:+88007009329">8-800-700-93-29</a></p>
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-calendar3"
           viewBox="0 0 16 16">
@@ -1164,13 +1183,14 @@
           <path
             d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
         </svg>
-        <h5>График работы:</h5>
+        <h5 class="inline">График работы:</h5>
 
         <p>Круглосуточно</p>
       </div>
     </div>
   </div>
-
+<br>
+<br>
 
 
 
