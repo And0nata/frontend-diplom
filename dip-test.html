@@ -11,6 +11,11 @@
   <style>
     body {
       position: relative;
+      background: linear-gradient(rgba(255, 255, 255, 0) .9em, rgba(0, 0, 0, .05) 1em) 0 0,
+        linear-gradient(90deg,
+          rgba(255, 255, 255, 0) .9em, rgba(0, 0, 0, 0.05) 1em) 0 0;
+      background-size: 1em 1em;
+      background-color: rgb(255, 255, 250);
     }
 
     thead>tr {
@@ -39,12 +44,12 @@
     }
 
     h2 {
-      text-shadow: rgb(227, 231, 165) 0px 0 25px;
+      text-shadow: rgb(240, 238, 113) 0px 0 25px;
     }
 
     .bug2 {
-      background: rgb(203, 223, 30);
-      background: radial-gradient(circle, rgba(203, 223, 30, 1) 2%, rgba(171, 203, 100, 1) 49%, rgba(91, 201, 89, 1) 94%);
+      background: rgb(255, 207, 72);
+      background: radial-gradient(circle, rgba(255, 207, 72, 1) 0%, rgba(254, 255, 70, 1) 50%, rgba(189, 231, 96, 1) 100%);
     }
 
     .inline {
@@ -99,20 +104,20 @@
 
     #about .card:hover h4,
     #about .card:hover svg {
-      color: goldenrod;
-      fill: goldenrod;
+      color: rgb(243, 148, 40);
+      fill: rgb(243, 148, 40);
     }
 
     #why .card:hover h4,
     #why .card:hover svg {
-      color: lightsalmon;
-      fill: lightsalmon;
+      color: rgb(204, 201, 11);
+      fill: rgb(204, 201, 11);
     }
 
     #test .card:hover h4,
     #test .card:hover svg {
-      text-shadow: rgb(219, 238, 52) 0px 0 15px;
-      fill: rgb(205, 212, 101);
+      text-shadow: rgb(206, 221, 75) 0px 0 15px;
+      fill: rgb(206, 221, 75);
     }
 
     #also .card:hover h4,
@@ -133,7 +138,7 @@
       text-transform: uppercase;
       font-weight: bold;
       text-shadow: darkblue 0px 0 20px;
-      outline: 4px groove red;
+      outline: 4px groove rgb(252, 141, 50);
       margin-left: 30px;
       padding: 5px 20px;
     }
@@ -267,7 +272,7 @@
     <br>
     <br>
     <h2 class="text-center mt-5">Компания тестировщиков </h2>
-    <h1 class="text-center mb-5 animate-grow">"Тестеры"</h1>
+    <h1 class="text-center mt-2 mb-5 animate-grow">"Тестеры"</h1>
   </div>
 
   <!-- карточки -->
